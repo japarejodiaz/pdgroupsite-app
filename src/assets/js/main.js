@@ -25,6 +25,11 @@
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       e.preventDefault();
       var target = $(this.hash);
+
+      console.log("enrtre por aqui");
+
+      console.log(target.length);
+    
       if (target.length) {
 
         var scrollto = target.offset().top;
@@ -46,12 +51,16 @@
           scrollTop: scrollto
         }, 1500, 'easeInOutExpo');
 
+       
         if ($(this).parents('.nav-menu, .mobile-nav').length) {
+          
+          console.log("pasa por aqui t"); 
           $('.nav-menu .active, .mobile-nav .active').removeClass('active');
           $(this).closest('li').addClass('active');
         }
 
         if ($('body').hasClass('mobile-nav-active')) {
+            console.log("pasa por aqui x");
           $('body').removeClass('mobile-nav-active');
           $('.mobile-nav-toggle i').toggleClass('bx-menu bx-x');
           $('.mobile-nav-overly').fadeOut();
@@ -61,8 +70,11 @@
     }
   });
 
+  console.log($('.nav-menu').length);
+
   // Mobile Navigation
   if ($('.nav-menu').length) {
+    console.log("pase por nav menu");
     var $mobile_nav = $('.nav-menu').clone().prop({
       class: 'mobile-nav d-lg-none'
     });
@@ -78,7 +90,7 @@
 
     $(document).on('click', '.mobile-nav .drop-down > a', function(e) {
       e.preventDefault();
-      $(this).next().slideToggle(300);
+      $(this).next().slideToggle(100);
       $(this).parent().toggleClass('active');
     });
 
@@ -93,6 +105,7 @@
       }
     });
   } else if ($(".mobile-nav, .mobile-nav-toggle").length) {
+    console.log("pase pornav menu 2")
     $(".mobile-nav, .mobile-nav-toggle").hide();
   }
 
