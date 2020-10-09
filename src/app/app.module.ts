@@ -13,6 +13,7 @@ import { ServicesComponent } from './pages/services/services.component';
 import { PortafolioComponent } from './pages/portafolio/portafolio.component';
 import { TeamsComponent } from './pages/teams/teams.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { DevelopmentProfesionalComponent } from './pages/development-profesional/development-profesional.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
     ServicesComponent,
     PortafolioComponent,
     TeamsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    DevelopmentProfesionalComponent
   ],
   imports: [
     BrowserModule,

@@ -1601,8 +1601,30 @@ section {
   font-size: 14px;
 }
 
+.contact .php-email-form input {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.contact .php-email-form input .form-check-input {
+  border-radius: 0;
+  box-shadow: none;
+  font-size:  1px;
+}
+
+.contact .php-email-form label .form-check-label {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 50px;
+}
+
 .contact .php-email-form input::focus, .contact .php-email-form textarea::focus {
   background-color: #68A4C4;
+}
+
+.contact .php-email-form input[type="radio"] {
+  padding: 20px 15px;
 }
 
 .contact .php-email-form input {

@@ -4,11 +4,11 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-!(function($) {
+!(function ($) {
   "use strict";
 
   // Toggle .header-scrolled class to #header when page is scrolled
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
       $('#header').addClass('header-scrolled');
     } else {
@@ -21,15 +21,11 @@
   }
 
   // Smooth scroll for the navigation menu and links with .scrollto classes
-  $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function(e) {
+  $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function (e) {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       e.preventDefault();
       var target = $(this.hash);
-
-      console.log("enrtre por aqui");
-
-      console.log(target.length);
-    
+      
       if (target.length) {
 
         var scrollto = target.offset().top;
@@ -51,16 +47,16 @@
           scrollTop: scrollto
         }, 1500, 'easeInOutExpo');
 
-       
+
         if ($(this).parents('.nav-menu, .mobile-nav').length) {
-          
-          console.log("pasa por aqui t"); 
+
+
           $('.nav-menu .active, .mobile-nav .active').removeClass('active');
           $(this).closest('li').addClass('active');
         }
 
         if ($('body').hasClass('mobile-nav-active')) {
-            console.log("pasa por aqui x");
+
           $('body').removeClass('mobile-nav-active');
           $('.mobile-nav-toggle i').toggleClass('bx-menu bx-x');
           $('.mobile-nav-overly').fadeOut();
@@ -70,11 +66,9 @@
     }
   });
 
-  console.log($('.nav-menu').length);
-
-  // Mobile Navigation
+   // Mobile Navigation
   if ($('.nav-menu').length) {
-    console.log("pase por nav menu");
+
     var $mobile_nav = $('.nav-menu').clone().prop({
       class: 'mobile-nav d-lg-none'
     });
@@ -82,19 +76,19 @@
     $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="bx bx-menu"></i></button>');
     $('body').append('<div class="mobile-nav-overly"></div>');
 
-    $(document).on('click', '.mobile-nav-toggle', function(e) {
+    $(document).on('click', '.mobile-nav-toggle', function (e) {
       $('body').toggleClass('mobile-nav-active');
       $('.mobile-nav-toggle i').toggleClass('bx-menu bx-x');
       $('.mobile-nav-overly').toggle();
     });
 
-    $(document).on('click', '.mobile-nav .drop-down > a', function(e) {
+    $(document).on('click', '.mobile-nav .drop-down > a', function (e) {
       e.preventDefault();
       $(this).next().slideToggle(100);
       $(this).parent().toggleClass('active');
     });
 
-    $(document).click(function(e) {
+    $(document).click(function (e) {
       var container = $(".mobile-nav, .mobile-nav-toggle");
       if (!container.is(e.target) && container.has(e.target).length === 0) {
         if ($('body').hasClass('mobile-nav-active')) {
@@ -105,19 +99,18 @@
       }
     });
   } else if ($(".mobile-nav, .mobile-nav-toggle").length) {
-    console.log("pase pornav menu 2")
     $(".mobile-nav, .mobile-nav-toggle").hide();
   }
 
   // Intro carousel
   var heroCarousel = $("#heroCarousel");
 
-  heroCarousel.on('slid.bs.carousel', function(e) {
+  heroCarousel.on('slid.bs.carousel', function (e) {
     $(this).find('h2').addClass('animate__animated animate__fadeInDown');
     $(this).find('p, .btn-get-started').addClass('animate__animated animate__fadeInUp');
   });
   // Back to top button
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
       $('.back-to-top').fadeIn('slow');
     } else {
@@ -125,7 +118,7 @@
     }
   });
 
-  $('.back-to-top').click(function() {
+  $('.back-to-top').click(function () {
     $('html, body').animate({
       scrollTop: 0
     }, 1500, 'easeInOutExpo');
@@ -133,7 +126,7 @@
   });
 
   // Initiate the venobox plugin
-  $(window).on('load', function() {
+  $(window).on('load', function () {
     $('.venobox').venobox();
   });
 
@@ -144,8 +137,8 @@
   });
 
   // Skills section
-  $('.skills-content').waypoint(function() {
-    $('.progress .progress-bar').each(function() {
+  $('.skills-content').waypoint(function () {
+    $('.progress .progress-bar').each(function () {
       $(this).css("width", $(this).attr("aria-valuenow") + '%');
     });
   }, {
@@ -161,12 +154,12 @@
   });
 
   // Porfolio isotope and filter
-  $(window).on('load', function() {
+  $(window).on('load', function () {
     var portfolioIsotope = $('.portfolio-container').isotope({
       layoutMode: 'fitRows'
     });
 
-    $('#portfolio-flters li').on('click', function() {
+    $('#portfolio-flters li').on('click', function () {
       $("#portfolio-flters li").removeClass('filter-active');
       $(this).addClass('filter-active');
 
@@ -193,7 +186,7 @@
       once: true
     });
   }
-  $(window).on('load', function() {
+  $(window).on('load', function () {
     aos_init();
   });
 
