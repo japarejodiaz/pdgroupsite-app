@@ -12,24 +12,24 @@
     <nav class="nav-menu float-right d-none d-lg-block">
       <ul>
         <li class="nav-item" routerLinkActive="active">
-          <a routerLink="dashboard">Home</a>
+          <a class=nav-link [routerLink]="'dashboard'">Home</a>
         </li>
 
         <li class="nav-item" routerLinkActive="active">
-          <a routerLink="services">Our Products</a>
+          <a class=nav-link data-target="" routerLink="services">Our Products</a>
         </li>
 
         <li class="nav-item" routerLinkActive="active">
-          <a routerLink="teams">Teams</a>
+          <a class=nav-link routerLink="teams">Teams</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
-          <a routerLink="about-us">About Us</a>
+          <a class=nav-link data-target="link" routerLink="/about-us">About Us</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
-          <a routerLink="contact-us">Contact Us</a>
+          <a class=nav-link routerLink="contact-us">Contact Us</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
-          <a routerLink="development-professional">Professional Development</a>
+          <a class=nav-link routerLink="development-professional">Professional Development</a>
         </li>
       </ul>
     </nav>

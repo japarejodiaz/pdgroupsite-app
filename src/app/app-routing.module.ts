@@ -11,7 +11,7 @@ import { DevelopmentProfesionalComponent } from './pages/development-profesional
 
 const routes: Routes = [
   { path: "dashboard", component: DashboardComponent },
-  { path: 'about-us', component: AboutUsComponent },
+  { path: "about-us", component: AboutUsComponent },
   { path: "teams", component: TeamsComponent },
   { path: "services", component: ServicesComponent },
   { path: "contact-us", component: ContactUsComponent },
@@ -21,7 +21,9 @@ const routes: Routes = [
  ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: false })],
+  imports: [
+    RouterModule.forRoot(routes, { useHash: true }),
+  ],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
