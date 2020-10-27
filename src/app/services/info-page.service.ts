@@ -19,7 +19,7 @@ export class InfoPageService {
   constructor( private http: HttpClient ) {
   
     this.cargarInfo();
-    this.getProducto('S10_2016');
+   // this.getProducto('S10_2016');
   
   }
   
