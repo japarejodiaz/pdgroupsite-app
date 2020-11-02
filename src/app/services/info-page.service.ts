@@ -7,8 +7,8 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class InfoPageService {
-  
   infoPagina: InfoPagina = {};
+  
   infoPagina2: InfoPagina = {};
   cargada: boolean = false; 
   infoProducto: InfoProducto = {};
@@ -29,7 +29,7 @@ export class InfoPageService {
    */
   
   private cargarInfo() {
-    console.log("Servicio Listo viejo");
+   // console.log("Servicio Listo viejo");
 
     this.http
       .get("assets/data/data-pagina.json")
@@ -52,18 +52,12 @@ export class InfoPageService {
      // .map(response => response.json)      
       .subscribe( (resp: InfoProducto) => {
       
-        console.log(resp);
+       // console.log(resp);
         
-        
-        
-        this.infoProducto = resp;
-        
-       // console.log(this.infoProducto.producto.codigo);
-
-       
-        
-        console.log(this.infoProducto.error);
-        console.log(this.infoProducto.producto[0].producto);
+        this.infoProducto = resp;        
+          
+        /* console.log(this.infoProducto.error);
+        console.log(this.infoProducto.producto[0].producto); */
         
         for(let i in this.infoProducto.producto) {
           console.log("entre ", this.infoProducto.producto[i]); // 
