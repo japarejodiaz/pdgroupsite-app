@@ -7,6 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class InfoPageService {
+
   infoPagina: InfoPagina = {};
   
   infoPagina2: InfoPagina = {};
