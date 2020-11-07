@@ -12,7 +12,7 @@ export class AppComponent {
   constructor(public _infoPageAppComponent: InfoPageAppcomponentService) { 
 
   
-      console.log(_infoPageAppComponent.infoPageSection1["section_title_h2"])
+     // console.log(_infoPageAppComponent.infoPageSection1["section_title_h2"])
   
   }
 

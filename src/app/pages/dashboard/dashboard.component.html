@@ -57,16 +57,14 @@
 
           <div class="icon-box">
             <div class="icon"><i class="bx bx-fingerprint"></i></div>
-            <h4 class="title"><a href="">Oportunidades de Carrera</a></h4>
-            <p class="description">Estamos comprometidos con tu crecimiento. Nuestros esfuerzos están enfocados en
-              brindarle todo el apoyo que necesita para desarrollar con éxito su carrera.</p>
+            <h4 class="title"><a href="">{{ _infoPageDashboard.pageSectionWhyus1["section_title_h4"] }}</a></h4>
+            <p class="description">{{ _infoPageDashboard.pageSectionWhyus1["section_parrafo_h4"] }}</p>
           </div>
 
           <div class="icon-box">
             <div class="icon"><i class="bx bx-money"></i></div>
-            <h4 class="title"><a href="">Ingresos y Comisiones</a></h4>
-            <p class="description">Puede desarrollar una carrera profesional con nosotros, con un potencial de ingresos
-              ilimitado.</p>
+            <h4 class="title"><a href="">{{ _infoPageDashboard.pageSectionWhyus2["section_title_h4"] }}</a></h4>
+            <p class="description">{{ _infoPageDashboard.pageSectionWhyus2["section_parrafo_h4"] }}</p>
           </div>
 
         </div>
@@ -92,15 +90,11 @@
           <img src="assets/img/features-1.svg" class="img-fluid" alt="">
         </div>
         <div class="col-md-7 pt-4">
-          <h3>Trabajo en equipo, colaboracion, honestidad.</h3>
-          <p class="font-italic">
-            Nuestros valores vienen dados principalmente por la ética, honestidad, excelencia en la
-            atención, responsabilidad, puntualidad, colaboración, trabajo en equipo, perseverancia, liderazgo,
-            transparencia y sobre todo pasión en lo que hacemos y la mejor disposición a su alcance.</p>
+          <h3>{{ _infoPageDashboard.pageSectionFeatures1["section_title_h3"] }}</h3>
+          <p class="font-italic">{{ _infoPageDashboard.pageSectionFeatures1["section_parrafo_h3"] }}</p>
           
-          <ul>
-            <li><i class="icofont-check"></i> Trabajo en equipo, colaboracion, sobre todo pasion por lo que hacemos.</li>
-            <li><i class="icofont-check"></i> Responsabilidad, puntualidad, atencion de primera linea.</li>
+          <ul *ngFor="let icon_section1 of _infoPageDashboard.listIconSection1">
+            <li><i class="icofont-check"></i>{{ icon_section1 }}/li>        
           </ul>
         </div>
       </div>
@@ -110,18 +104,10 @@
           <img src="assets/img/features-2.svg" class="img-fluid" alt="">
         </div>
         <div class="col-md-7 pt-5 order-2 order-md-1">
-          <h3>Garantizamos su inversion.</h3>
-          <p class="font-italic">
-            Ingresos garantizados de por vida, defensa contra la inflación y la devaluación de su moneda local.
-            Pólizas participantes con características de inversión extraordinarias. Usted mismo puede recibir los
-            beneficios de su seguro de vida. 
+          <h3>{{ _infoPageDashboard.pageSectionFeatures2["section_title_h3"] }}</h3>
+          <p class="font-italic">{{ _infoPageDashboard.pageSectionFeatures2["section_parrafo_h3"] }}      
           </p>
-          <p>
-            Pólizas participantes con características de inversión extraordinarias. Usted mismo puede recibir los
-            beneficios de su seguro de vida, garantia de ingresos para los seres queridos en caso de fallecimiento del
-            asegurado.
-          </p>
-        </div>
+         </div>
       </div>
 
       <div class="row" data-aos="fade-up">
@@ -129,14 +115,10 @@
           <img src="assets/img/features-3.svg" class="img-fluid" alt="">
         </div>
         <div class="col-md-7 pt-5">
-          <h3>Beneficios de nuestros portafolio de productos</h3>
-          <p>Construcción de capital en moneda estable mediante el depósito de una prima anual.</p>
-          <ul>
-            <li><i class="icofont-check"></i> Planes diseñados para acumulación de Valores Garantizados, respaldados por
-              Seguro de Vida.</li>
-            <li><i class="icofont-check"></i> Opciones de jubilación con ingresos de por vida en dólares.</li>
-            <li><i class="icofont-check"></i> Protección de por vida.</li>
-            <li><i class="icofont-check"></i> Tarifas habitualmente inferiores a las que ofrecen las empresas.</li>
+          <h3>{{ _infoPageDashboard.pageSectionFeatures3["section_title_h3"] }}</h3>
+          <p>{{ _infoPageDashboard.pageSectionFeatures3["section_parrafo_h3"] }}</p>
+          <ul *ngFor="let icon_section2 of _infoPageDashboard.listIconSection2">
+            <li><i class="icofont-check"></i>{{ icon_section2 }} </li>
           </ul>
         </div>
       </div>
