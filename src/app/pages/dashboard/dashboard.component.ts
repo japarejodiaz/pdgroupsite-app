@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthTokenService } from '../../services/auth-token.service';
 import { ResponseGenerateToken } from '../../interfaces/response-generate-token.interfaces';
 import { InfoPageDashboardService } from '../../services/info-page-dashboard.service';
+import { ModalFormService } from '../../services/modal-form.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -16,7 +17,8 @@ export class DashboardComponent implements OnInit {
   contrasena: string = '123456';
 
   constructor(public tokenService: AuthTokenService,
-              public _infoPageDashboard: InfoPageDashboardService  ) { }
+    public _infoPageDashboard: InfoPageDashboardService,
+    private modalFormService: ModalFormService  ) { }
 
   ngOnInit(): void {
     
@@ -31,6 +33,12 @@ export class DashboardComponent implements OnInit {
   
   }
   
+  abrirModal() {
+    this.modalFormService.abrirModal();
+  }
+  
   
   
 }
+
+

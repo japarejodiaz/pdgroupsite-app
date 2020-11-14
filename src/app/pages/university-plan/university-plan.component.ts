@@ -2,19 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { ModalFormService } from '../../services/modal-form.service';
 
 @Component({
-  selector: 'app-about-us',
-  templateUrl: './about-us.component.html',
-  styleUrls: ['./about-us.component.css']
+  selector: 'app-university-plan',
+  templateUrl: './university-plan.component.html',
+  styles: [
+  ]
 })
-export class AboutUsComponent implements OnInit {
+export class UniversityPlanComponent implements OnInit {
 
   constructor( private modalFormService: ModalFormService) { }
 
   ngOnInit(): void {
   }
-
-  abrirModal() {
   
+  abrirModal() {
     this.modalFormService.abrirModal();
   }
 

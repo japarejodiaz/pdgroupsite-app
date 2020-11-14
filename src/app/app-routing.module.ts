@@ -7,11 +7,23 @@ import { PortafolioComponent } from './pages/portafolio/portafolio.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { TeamsComponent } from './pages/teams/teams.component';
 import { DevelopmentProfesionalComponent } from './pages/development-profesional/development-profesional.component';
+import { LifeInsuranceComponent } from './pages/life-insurance/life-insurance.component';
+import { HealthInsuranceComponent } from './pages/health-insurance/health-insurance.component';
+import { AnnuitiesComponent } from './pages/annuities/annuities.component';
+import { InternationalPresenceComponent } from './pages/international-presence/international-presence.component';
+import { ScheduleSavingsComponent } from './pages/schedule-savings/schedule-savings.component';
+import { UniversityPlanComponent } from './pages/university-plan/university-plan.component';
 
 
 const routes: Routes = [
   { path: "dashboard", component: DashboardComponent },
+  { path: "health-insurance", component: HealthInsuranceComponent },
+  { path: "annuities", component: AnnuitiesComponent },
+  { path: "university-plan", component: UniversityPlanComponent },
+  { path: "schedule-savings", component: ScheduleSavingsComponent },
+  { path: "international-presence", component: InternationalPresenceComponent },
   { path: "about-us", component: AboutUsComponent },
+  { path: "life-insurance", component: LifeInsuranceComponent },
   { path: "teams", component: TeamsComponent },
   { path: "services", component: ServicesComponent },
   { path: "contact-us", component: ContactUsComponent },

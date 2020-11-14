@@ -1,65 +1,155 @@
 <app-header></app-header>
 
 <section id="hero" class="d-flex justify-cntent-center align-items-center">
-  <div id="heroCarousel" class="container carousel carousel-fade"
-    data-ride="carousel">
+  <div id="heroCarousel" class="container carousel carousel-fade" data-ride="carousel">
+    <!-- Slide 7-->
+    <div class="carousel-item">
+      <div class="carousel-container">
+        <h2 class="animate__animated animate__fadeInDown">Tips</h2>
+        <p class="animate__animated animate__fadeInUp">
+          {{ _infoPageAppComponent.infoPageSection2["section_parrafo_h2"] }}
+        </p>
+ <a routerLink="about-us" class="btn-get-started animate__animated animate__fadeInUp">Mas información...</a>
+      </div>
+    </div>
 
     <!-- Slide 1 -->
     <div class="carousel-item active">
       <div class="carousel-container">
-        <h2 class="animate__animated animate__fadeInDown">{{ _infoPageAppComponent.infoPageSection1["section_title_h2"] }}</h2>
-        <p class="animate__animated animate__fadeInUp">{{ _infoPageAppComponent.infoPageSection1["section_parrafo_h2"] }}</p>
-        <a href="" class="btn-get-started animate__animated animate__fadeInUp">Leer mas...</a>
+        <h2 class="animate__animated animate__fadeInDown">
+          {{ _infoPageAppComponent.infoPageSection1["section_title_h2"] }}
+        </h2>
+        <p class="animate__animated animate__fadeInUp">
+          {{ _infoPageAppComponent.infoPageSection1["section_parrafo_h2"] }}
+        </p>
+        <a routerLink="dashboard" class="btn-get-started animate__animated animate__fadeInUp">Leer mas...</a>
       </div>
     </div>
 
     <!-- Slide 2 -->
     <div class="carousel-item">
       <div class="carousel-container">
-        <h2 class="animate__animated animate__fadeInDown">
-          {{ _infoPageAppComponent.infoPageSection2["section_title_h2"] }}</h2>
-        <p class="animate__animated animate__fadeInUp">{{ _infoPageAppComponent.infoPageSection2["section_parrafo_h2"] }}</p>
-        <a href="" class="btn-get-started animate__animated animate__fadeInUp">Leer mas...</a>
+        <h2 class="animate__animated animate__fadeInDown">Anualidades</h2>
+        <p class="animate__animated animate__fadeInUp">
+          {{ _infoPageAppComponent.infoPageSection2["section_parrafo_h2"] }}
+        </p>
+        <a routerLink="annuities" class="btn-get-started animate__animated animate__fadeInUp">Leer mas...</a>
       </div>
     </div>
 
     <!-- Slide 3 -->
     <div class="carousel-item">
       <div class="carousel-container">
-        <h2 class="animate__animated animate__fadeInDown">{{ _infoPageAppComponent.infoPageSection3["section_title_h2"] }}</h2>
-        <p class="animate__animated animate__fadeInUp">{{ _infoPageAppComponent.infoPageSection2["section_parrafo_h2"] }}</p>
-        <a href="" class="btn-get-started animate__animated animate__fadeInUp">Leer mas...</a>
+        <h2 class="animate__animated animate__fadeInDown">
+          Pensiones y Jubilaciones
+        </h2>
+        <p class="animate__animated animate__fadeInUp">
+          {{ _infoPageAppComponent.infoPageSection3["section_parrafo_h2"] }}
+        </p>
+        <a routerLink="services" class="btn-get-started animate__animated animate__fadeInUp">Leer mas...</a>
       </div>
     </div>
 
-    <a class="carousel-control-prev" href="#heroCarousel" role="button"
-      data-slide="prev">
-      <span class="carousel-control-prev-icon bx bx-chevron-left"
-        aria-hidden="true"></span>
+    <!-- Slide 4 -->
+    <div class="carousel-item">
+      <div class="carousel-container">
+        <h2 class="animate__animated animate__fadeInDown">Polizas de Vida</h2>
+        <p class="animate__animated animate__fadeInUp">
+          {{ _infoPageAppComponent.infoPageSection2["section_parrafo_h2"] }}
+        </p>
+
+        <a routerLink="life-insurance" class="btn-get-started animate__animated animate__fadeInUp">Mas informacion</a>
+      </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="carousel-item">
+      <div class="carousel-container">
+        <h2 class="animate__animated animate__fadeInDown">Polizas de Salud</h2>
+        <p class="animate__animated animate__fadeInUp">
+          {{ _infoPageAppComponent.infoPageSection2["section_parrafo_h2"] }}
+        </p>       
+        <a routerLink="health-insurance" class="btn-get-started animate__animated animate__fadeInUp">Mas informacion</a>
+      </div>
+    </div>
+
+<!-- Slide 8-->
+<div class="carousel-item">
+  <div class="carousel-container">
+    <h2 class="animate__animated animate__fadeInDown">
+      Planes de Ahorro Universitarios
+    </h2>
+    <p class="animate__animated animate__fadeInUp">
+      {{ _infoPageAppComponent.infoPageSection2["section_parrafo_h2"] }}
+    </p>
+    <a routerLink="university-plan" class="btn-get-started animate__animated animate__fadeInUp">Mas
+      informacion</a>
+  </div>
+</div>
+
+    <!-- Slide 6 -->
+    <div class="carousel-item">
+      <div class="carousel-container">
+        <h2 class="animate__animated animate__fadeInDown">Ahorro Programado</h2>
+        <p class="animate__animated animate__fadeInUp">
+          {{ _infoPageAppComponent.infoPageSection2["section_parrafo_h2"] }}
+        </p>        
+        <a routerLink="schedule-savings" class="btn-get-started animate__animated animate__fadeInUp">Mas informacion</a>
+      </div>
+    </div>
+
+    <!-- Slide 7-->
+    <div class="carousel-item">
+      <div class="carousel-container">
+        <h2 class="animate__animated animate__fadeInDown">
+          Presencia Internacional
+        </h2>
+        <p class="animate__animated animate__fadeInUp">
+          {{ _infoPageAppComponent.infoPageSection2["section_parrafo_h2"] }}
+        </p>
+        <a routerLink="international-presence" class="btn-get-started animate__animated animate__fadeInUp">Mas
+          informacion</a>
+      </div>
+    </div>
+
+    <!-- Slide 8-->
+    <div class="carousel-item">
+      <div class="carousel-container">
+        <h2 class="animate__animated animate__fadeInDown">
+          Desarrollo Profesional
+        </h2>
+        <p class="animate__animated animate__fadeInUp">
+          {{ _infoPageAppComponent.infoPageSection2["section_parrafo_h2"] }}
+        </p>
+        <a routerLink="development-professional" class="btn-get-started animate__animated animate__fadeInUp">Mas
+          informacion</a>
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
 
-    <a class="carousel-control-next" href="#heroCarousel" role="button"
-      data-slide="next">
-      <span class="carousel-control-next-icon bx bx-chevron-right"
-        aria-hidden="true"></span>
+    <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
-
   </div>
-</section><!-- End Hero -->
 
+
+</section>
+<!-- End Hero -->
 
 <main id="main">
 
 
-  <!-- <app-dashboard></app-dashboard> -->
-
-  <router-outlet></router-outlet>  
-
-  <!-- <app-about-us></app-about-us> -->
-
+  <router-outlet></router-outlet>
 
 </main>
 
 <app-footer></app-footer>
+
+<app-modal-form></app-modal-form>
+
+<script defer data-key="6fd735c9-1763-4c1b-b3c5-70771efb5e42" src="https://widget.tochat.be/bundle.js"> </script>
