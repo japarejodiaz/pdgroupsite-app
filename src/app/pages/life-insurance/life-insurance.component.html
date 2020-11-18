@@ -1,95 +1,61 @@
 <!-- ======= Our Portfolio Section ======= -->
 <section class="breadcrumbs">
   <div class="container">
-
     <div class="d-flex justify-content-between align-items-center">
       <h2>Seguros de Vida</h2>
       <ol>
         <li><a routerLink="dashboard">Home</a></li>
-        <li>Seguros de vida</li>
+        <li>Seguros de Vida</li>
       </ol>
     </div>
-
   </div>
-</section><!-- End Our Portfolio Section -->
+</section>
+<!-- End Our Portfolio Section -->
 
 <!-- ======= Service Details Section ======= -->
 <section class="service-details">
   <div class="container">
-
     <div class="row">
       <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
         <div class="card">
           <div class="card-img">
-            <img src="assets/img/service-details-1.jpg" alt="...">
+            <img src="assets/img/{{ _infoPageLifeInsuranceServices.image1 }}" alt="..." />
           </div>
           <div class="card-body">
-            <h5 class="card-title"><a href="#">Executive 10</a></h5>
-            <p class="card-text">Brindar a nuestros miembros del equipo la mejor capacitación para que puedan servir
-              desinteresadamente a los demás, ofreciendo seguridad financiera, tecnica y protección a nuestros Clientes
-              en todo el mundo.</p>
-            <!-- <div class="read-more"><a href="#"><i class="icofont-arrow-right"></i></a></div> -->
-            <button type="button" class="btn btn-primary" (click)="abrirModal()">
-              <font style="vertical-align: inherit">
-                <font style="vertical-align: inherit">Read More</font>
-              </font>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
-        <div class="card">
-          <div class="card-img">
-            <img src="assets/img/service-details-2.jpg" alt="...">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title"><a href="#">Executive 15</a></h5>
-            <p class="card-text">Nuestros esfuerzos están orientados a capacitar líderes y, para cumplir con nuestro
-              objetivo, nos enfocamos en el reclutamiento, selección y capacitación de Directivos profesionales en el
-              área de ventas de Seguros de Vida y Planes de Jubilación en dólares estadounidenses.</p>
-            <!-- <div class="read-more"><a href="#"><i class="icofont-arrow-right"></i> Read More</a></div> -->
-            <button type="button" class="btn btn-primary" (click)="abrirModal()">
-              <font style="vertical-align: inherit">
-                <font style="vertical-align: inherit">Read More</font>
-              </font>
-            </button>
-          </div>
-        </div>
-
-      </div>
-      <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
-        <div class="card">
-          <div class="card-img">
-            <img src="assets/img/service-details-3.jpg" alt="...">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title"><a href="#">Executive 20</a></h5>
-            <p class="card-text">Ser la empresa líder en la capacitación y calificación de altos ejecutivos con el
-              propósito de asesorar y proteger a miles de personas, familias y corporaciones alrededor del mundo,
-              ofreciendo la más alta calidad de productos, brindando excelencia en nuestros servicios y generando
-              calidad de vida.
+            <h5 class="card-title"><a routerLink="dashboard">{{ _infoPageLifeInsuranceServices.infoPageSection1["section_title_h5"] }}</a>
+            </h5>
+            <p class="card-text">
+              {{ _infoPageLifeInsuranceServices.infoPageSection1["section_parrafo_h5"] }}
             </p>
-            <div class="read-more"><a (click)="abrirModal()"><i class="icofont-arrow-right"></i> Read More</a>
+            <div class="read-more">
+              <a (click)="abrirModal()"
+                ><i class="icofont-arrow-right"></i> Mas información</a
+              >
             </div>
-
           </div>
         </div>
       </div>
       <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
         <div class="card">
           <div class="card-img">
-            <img src="assets/img/service-details-4.jpg" alt="...">
+            <img src="assets/img/{{ _infoPageLifeInsuranceServices.image2 }}" alt="..." />
           </div>
           <div class="card-body">
-            <h5 class="card-title"><a href="#">Executive Supreme</a></h5>
-            <p class="card-text">Nuestros valores vienen dados principalmente por la ética, honestidad, excelencia en la
-              atención, responsabilidad, puntualidad, colaboración, trabajo en equipo, perseverancia, liderazgo,
-              transparencia y sobre todo pasión en lo que hacemos y la mejor disposición a su alcance.</p>
-            <div class="read-more"><a (click)="abrirModal()"><i class=" icofont-arrow-right"></i> Read More</a></div>
+            <h5 class="card-title"><a
+                routerLink="dashboard">{{ _infoPageLifeInsuranceServices.infoPageSection2["section_title_h5"] }}</a>
+            </h5>
+            <p class="card-text">
+              {{ _infoPageLifeInsuranceServices.infoPageSection2["section_parrafo_h5"] }}
+            </p>
+            <div class="read-more">
+              <a (click)="abrirModal()"
+                ><i class="icofont-arrow-right"></i> Mas información</a
+              >
+            </div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
-</section><!-- End Service Details Section -->
+</section>
+<!-- End Service Details Section -->

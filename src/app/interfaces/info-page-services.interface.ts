@@ -12,6 +12,8 @@ export interface InfoPageServices {
         section_parrafo_h4?: string;
         section_parrafo_h2?: string;
         section_url_img?: string;
+        section_title_h5?: string;
+        section_parrafo_h5?: string;
         detalle?:
         {
             section_icon_id?: number;

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InfoPageServicesService } from '../../services/info-page-services.service';
+import { ModalFormService } from '../../services/modal-form.service';
 
 @Component({
   selector: 'app-services',
@@ -9,17 +10,16 @@ import { InfoPageServicesService } from '../../services/info-page-services.servi
 export class ServicesComponent implements OnInit {
 
 
-  constructor(public _infoPageService: InfoPageServicesService) {
+  constructor(public _infoPageService: InfoPageServicesService,
+  private modalFormService: ModalFormService) {
      
 
   }
 
-  ngOnInit(): void {
-    
+  ngOnInit(): void {}
   
-    
-    
-    
+  abrirModal() {
+    this.modalFormService.abrirModal();
   }
 
 }

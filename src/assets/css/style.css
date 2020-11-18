@@ -357,7 +357,7 @@ h6,
     top: 0;
     width: 130%;
     height: 95%;
-    background: linear-gradient(to right, rgba(30, 67, 86, 0.8), rgba(30, 67, 86, 0.6)), url("../img/hero-bg.jpg") center top no-repeat;
+    background: linear-gradient(to right, rgba(30, 67, 86, 0.8), rgba(30, 67, 86, 0.6)), url("../img/bussiness-lg.jpg") center top no-repeat;
     z-index: 0;
     border-radius: 0 0 50% 50%;
     transform: translateX(-50%) rotate(0deg);
@@ -1135,6 +1135,14 @@ section {
 .service-details .card-img {
     width: calc(100% + 60px);
     margin-left: -30px;
+    overflow: hidden;
+    z-index: 9;
+    border-radius: 0;
+}
+
+.service-details .card-img2 {
+    width: calc(100% + 60px);
+    margin-left: +200px;
     overflow: hidden;
     z-index: 9;
     border-radius: 0;
@@ -2467,4 +2475,20 @@ section {
 
 .oculto-form {
   display: none;
+}
+#centrador{
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: red;
+}
+
+#imagen{
+    position: absolute;
+    width: 100px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 }

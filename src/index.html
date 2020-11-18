@@ -14,21 +14,65 @@
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap"
+        rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
-    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet" >
-    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet" >
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" >
-    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet" >
-    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet" >
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" >
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
     <!-- <link rel="stylesheet" href="assets/" > -->
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+    <!-- Start of Async Callbell Code -->
+    <script>
+        window.callbellSettings = {
+            token: "V6LyZaS8JEimNAuwdvowFjnZ"
+        };
+    </script>
+    <script>
+        (function () {
+            var w = window;
+            var ic = w.callbell;
+            if (typeof ic === "function") {
+                ic('reattach_activator');
+                ic('update', callbellSettings);
+            } else {
+                var d = document;
+                var i = function () {
+                    i.c(arguments)
+                };
+                i.q = [];
+                i.c = function (args) {
+                    i.q.push(args)
+                };
+                w.Callbell = i;
+                var l = function () {
+                    var s = d.createElement('script');
+                    s.type = 'text/javascript';
+                    s.async = true;
+                    s.src = 'https://dash.callbell.eu/include/' + window.callbellSettings.token + '.js';
+                    var x = d.getElementsByTagName('script')[0];
+                    x.parentNode.insertBefore(s, x);
+                };
+                if (w.attachEvent) {
+                    w.attachEvent('onload', l);
+                } else {
+                    w.addEventListener('load', l, false);
+                }
+            }
+        })()
+    </script>
+    <!-- End of Async Callbell Code -->
+
 
 </head>
 
@@ -51,7 +95,12 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-<script src='https://widget.tochat.be/bundle.js?key=49a5264e-c427-4846-befa-9978b69057f9'> </script>
+
+    <!-- <script defer data-key="c46463b6-02bc-4c12-9473-f130fd2d5ef3" src="https://widget.tochat.be/bundle.js"></script> -->
+
+    <!-- <a href="https://chatwith.io/s/5f33ce0c4aede"
+        style="display: table; font-family: sans-serif; text-decoration: none; margin: 1em auto; color: #fff; font- tamaño: 0.9em; relleno: 1em 2em 1em 3.5em; radio de borde: 2em; peso de fuente: negrita; fondo: # 25d366 url ('https://tochat.be/click-to-chat-directory/css/ whatsapp.svg ') centro sin repetición 1.5em; tamaño de fondo: 1.6em; ">
+        Contacto con WhatsApp </a> -->
 
 </body>
 
