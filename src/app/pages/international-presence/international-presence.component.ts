@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalFormService } from '../../services/modal-form.service';
+import { InfoPageInternationalPresenceService } from '../../services/info-page-international-presence.service';
 
 @Component({
   selector: 'app-international-presence',
@@ -9,7 +10,8 @@ import { ModalFormService } from '../../services/modal-form.service';
 export class InternationalPresenceComponent implements OnInit {
 
   
-  constructor(private modalFormService: ModalFormService) { }
+  constructor(private modalFormService: ModalFormService,
+              public _infoPageInternationalPresence: InfoPageInternationalPresenceService ) { }
 
   ngOnInit(): void {
   }
