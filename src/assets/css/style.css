@@ -1143,7 +1143,7 @@ section {
 
 .service-details .card-img2 {
     width: calc(100% + 60px);
-    margin-left: +200px;
+    margin-left: -35px;
     overflow: hidden;
     z-index: 9;
     border-radius: 0;
