@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalFormService } from '../../services/modal-form.service';
+import { InfoPageScheduleSavingsService } from '../../services/info-page-schedule-savings.service';
 
 @Component({
   selector: 'app-schedule-savings',
@@ -8,7 +9,8 @@ import { ModalFormService } from '../../services/modal-form.service';
 })
 export class ScheduleSavingsComponent implements OnInit {
 
-  constructor( private modalFormService: ModalFormService) { }
+  constructor(private modalFormService: ModalFormService,
+              public _infoPageScheduleSavingsServices: InfoPageScheduleSavingsService ) { }
 
   ngOnInit(): void {
   }

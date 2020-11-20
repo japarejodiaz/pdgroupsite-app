@@ -34,6 +34,11 @@ export class InfoPageDashboardService {
   
   listIconSection1: string [] = [];
   listIconSection2: string [] = [];
+  
+  image1: string; 
+  image2: string; 
+  image3: string; 
+  image4: string; 
 
   constructor(private http: HttpClient) {
 
@@ -59,9 +64,13 @@ export class InfoPageDashboardService {
         console.log(this.infoPageDashboardServices);
 
         this.infoPageSection1 = this.infoPageDashboardServices.page_section[0];
+        this.image1 = this.infoPageDashboardServices.page_section[0]["section_url_img"]
         this.infoPageSection2 = this.infoPageDashboardServices.page_section[1];
+        this.image2 = this.infoPageDashboardServices.page_section[1]["section_url_img"]
         this.infoPageSection3 = this.infoPageDashboardServices.page_section[2];
+        this.image3 = this.infoPageDashboardServices.page_section[2]["section_url_img"]
         this.infoPageSection4 = this.infoPageDashboardServices.page_section[3];
+        this.image4 = this.infoPageDashboardServices.page_section[3]["section_url_img"]
 
         console.log(this.infoPageSection1);
         console.log(this.infoPageSection2);
@@ -116,9 +125,7 @@ export class InfoPageDashboardService {
         console.log(this.infoPageServicesFeatures.page_section[0].detalle[1]);
         
         this.listIconSection1[0] = this.infoPageServicesFeatures.page_section[0].detalle[0]["parrafo_icon_text"];
-        this.listIconSection1[1] = this.infoPageServicesFeatures.page_section[0].detalle[1]["parrafo_icon_text"];
-        
-        
+        this.listIconSection1[1] = this.infoPageServicesFeatures.page_section[0].detalle[1]["parrafo_icon_text"];       
         this.listIconSection2[0] = this.infoPageServicesFeatures.page_section[2].detalle[0]["parrafo_icon_text"];
         this.listIconSection2[1] = this.infoPageServicesFeatures.page_section[2].detalle[1]["parrafo_icon_text"];
         this.listIconSection2[2] = this.infoPageServicesFeatures.page_section[2].detalle[2]["parrafo_icon_text"];

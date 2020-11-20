@@ -1,3 +1,19 @@
+<!-- ======= Our Portfolio Section ======= -->
+<section class="breadcrumbs">
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>Home</h2>
+            <ol>
+                <li><a routerLink="dashboard">Home</a></li>
+                <li>Home</li>
+            </ol>
+        </div>
+
+    </div>
+</section>
+<!-- End Our Portfolio Section -->
+
 <!-- ======= Service Details Section ======= -->
 <section class="service-details">
     <div class="container">
@@ -6,13 +22,12 @@
             <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
                 <div class="card">
                     <div class="card-img">
-                        <img src="assets/img/service-details-1.jpg" alt="...">
+                        <img src="assets/img/dashboard/{{ _infoPageDashboard.image1 }}" alt="...">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title"><a href="#">Nuestra Mision</a></h5>
-                        <p class="card-text">Brindar a nuestros miembros del equipo la mejor capacitación para que puedan servir desinteresadamente a los demás, ofreciendo seguridad financiera, tecnica y protección a nuestros Clientes en todo el mundo.</p>
-
-                        <div class="read-more"><a (click)="abrirModal()"><i class="icofont-arrow-right"></i> Read More</a></div>
+                        <h5 class="card-title"><a routerLink="dashboard">{{ _infoPageDashboard.infoPageSection1["section_title_h5"]}}</a></h5>
+                        <p class="card-text">{{ _infoPageDashboard.infoPageSection1["section_parrafo_h5"]}}</p>
+                        <div class="read-more"><a (click)="abrirModal()"><i class="icofont-arrow-right"></i> Mas Informacion</a></div>
 
                     </div>
                 </div>
@@ -20,15 +35,12 @@
             <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
                 <div class="card">
                     <div class="card-img">
-                        <img src="assets/img/service-details-2.jpg" alt="...">
+                        <img src="assets/img/dashboard/{{ _infoPageDashboard.image2 }}" alt="...">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title"><a href="#">Nuestro Plan</a></h5>
-                        <p class="card-text">Nuestros esfuerzos están orientados a capacitar líderes y, para cumplir con nuestro objetivo, nos enfocamos en el reclutamiento, selección y capacitación de Directivos profesionales en el área de ventas de Seguros de Vida y Planes
-                            de Jubilación en dólares estadounidenses.</p>
-
-                        <div class="read-more"><a (click)="abrirModal()"><i class="icofont-arrow-right"></i> Read More</a></div>
-
+                        <h5 class="card-title"><a routerLink="dashboard">{{ _infoPageDashboard.infoPageSection2["section_title_h5"]}}</a></h5>
+                        <p class="card-text">{{ _infoPageDashboard.infoPageSection2["section_parrafo_h5"]}}</p>
+                        <div class="read-more"><a (click)="abrirModal()"><i class="icofont-arrow-right"></i> Mas Informacion</a></div>
                     </div>
                 </div>
 
@@ -36,34 +48,29 @@
             <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
                 <div class="card">
                     <div class="card-img">
-                        <img src="assets/img/service-details-3.jpg" alt="...">
+                        <img src="assets/img/dashboard/{{ _infoPageDashboard.image3 }}" alt="...">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title"><a href="#">Nuestra Visión</a></h5>
-                        <p class="card-text">Ser la empresa líder en la capacitación y calificación de altos ejecutivos con el propósito de asesorar y proteger a miles de personas, familias y corporaciones alrededor del mundo, ofreciendo la más alta calidad de productos,
-                            brindando excelencia en nuestros servicios y generando calidad de vida.
-                        </p>
-                        <div class="read-more"><a (click)="abrirModal()"><i class="icofont-arrow-right"></i> Read More</a>
-                        </div>
-
+                        <h5 class="card-title"><a routerLink="dashboard">{{ _infoPageDashboard.infoPageSection3["section_title_h5"]}}</a></h5>
+                        <p class="card-text">{{ _infoPageDashboard.infoPageSection3["section_parrafo_h5"]}}</p>
+                        <div class="read-more"><a (click)="abrirModal()"><i class="icofont-arrow-right"></i> Mas Informacion</a></div>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
                 <div class="card">
                     <div class="card-img">
-                        <img src="assets/img/service-details-4.jpg" alt="...">
+                        <img src="assets/img/dashboard/{{ _infoPageDashboard.image4 }}" alt="...">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title"><a href="#">Nuestros Valores</a></h5>
-                        <p class="card-text">Nuestros valores vienen dados principalmente por la ética, honestidad, excelencia en la atención, responsabilidad, puntualidad, colaboración, trabajo en equipo, perseverancia, liderazgo, transparencia y sobre todo pasión en lo
-                            que hacemos y la mejor disposición a su alcance.</p>
-                        <div class="read-more"><a (click)="abrirModal()"><i class="icofont-arrow-right"></i> Read More</a></div>
+                        <h5 class="card-title"><a routerLink="dashboard">{{ _infoPageDashboard.infoPageSection4["section_title_h5"]}}</a></h5>
+                        <p class="card-text">{{ _infoPageDashboard.infoPageSection4["section_parrafo_h5"]}}</p>
+                        <div class="read-more"><a (click)="abrirModal()"><i class="icofont-arrow-right"></i> Mas Informacion</a></div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 </section>
 <!-- End Service Details Section -->

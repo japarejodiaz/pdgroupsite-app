@@ -17,16 +17,18 @@ export class InfoPageAnnuitiesService {
   infoPageAnnuitiesServices: InfoPageServices = {};
   infoPageSection1: InfoPageSection = {};
   infoPageSection2: InfoPageSection = {};
+  image1: string;
+  image2: string;
 
   constructor(private http: HttpClient) {
   
-     this.buscarDataAnuualidadPage(this.tokenP, this.usuarioP, this.idpageP, this.idsectionP);
+     this.buscarDataAnualidadPage(this.tokenP, this.usuarioP, this.idpageP, this.idsectionP);
     
   }
   
   
   
-  private buscarDataAnuualidadPage(token: string, usuario: string, idpage: number, idSection: number) {
+  private buscarDataAnualidadPage(token: string, usuario: string, idpage: number, idSection: number) {
   
     let url_comple = "/sections/obtener_page_section/";
 
@@ -42,6 +44,8 @@ export class InfoPageAnnuitiesService {
 
         this.infoPageSection1 = this.infoPageAnnuitiesServices.page_section[0];
         this.infoPageSection2 = this.infoPageAnnuitiesServices.page_section[1];
+        this.image1 = this.infoPageAnnuitiesServices.page_section[0]["section_url_img"]
+        this.image2 = this.infoPageAnnuitiesServices.page_section[1]["section_url_img"]
        
 
         console.log(this.infoPageSection1);
