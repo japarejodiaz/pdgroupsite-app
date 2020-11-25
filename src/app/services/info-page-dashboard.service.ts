@@ -78,6 +78,14 @@ export class InfoPageDashboardService {
         console.log(this.infoPageSection4);
 
         //    this.pageSectionWhyus = this.infoPageServices.page_section[1]
+
+       
+
+
+
+
+
+        
       });
   }
 

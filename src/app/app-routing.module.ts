@@ -13,6 +13,7 @@ import { AnnuitiesComponent } from './pages/annuities/annuities.component';
 import { InternationalPresenceComponent } from './pages/international-presence/international-presence.component';
 import { ScheduleSavingsComponent } from './pages/schedule-savings/schedule-savings.component';
 import { UniversityPlanComponent } from './pages/university-plan/university-plan.component';
+import { PensionsRetirementsComponent } from './pages/pensions-retirements/pensions-retirements.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: "international-presence", component: InternationalPresenceComponent },
   { path: "about-us", component: AboutUsComponent },
   { path: "life-insurance", component: LifeInsuranceComponent },
+  { path: "pensions-retirements", component: PensionsRetirementsComponent },
   { path: "teams", component: TeamsComponent },
   { path: "services", component: ServicesComponent },
   { path: "contact-us", component: ContactUsComponent },

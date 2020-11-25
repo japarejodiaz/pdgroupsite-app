@@ -1,0 +1,52 @@
+<!-- ======= Our Portfolio Section ======= -->
+<section class="breadcrumbs">
+  <div class="container">
+
+    <div class="d-flex justify-content-between align-items-center">
+      <h2>Pensiones y Jubilaciones</h2>
+      <ol>
+        <li><a routerLink="dashboard">Home</a></li>
+        <li>Pensiones y Jubilaciones</li>
+      </ol>
+    </div>
+
+  </div>
+</section>
+<!-- End Our Portfolio Section -->
+
+<!-- ======= Service Details Section ======= -->
+<section class="service-details">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+        <div class="card">
+          <div class="card-img">
+            <img src="assets/img/pensions/{{ _infoPagePensionsRetirementService.image1 }}" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><a
+                href="#">{{ _infoPagePensionsRetirementService.infoPageSection1["section_title_h5"] }}</a></h5>
+            <p class="card-text">{{ _infoPagePensionsRetirementService.infoPageSection1["section_parrafo_h5"] }}</p>
+            <div class="read-more"><a (click)="abrirModal()"><i class="icofont-arrow-right"></i>Mas informacion</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+        <div class="card">
+          <div class="card-img">
+            <img src="assets/img/pensions/{{ _infoPagePensionsRetirementService.image2 }}" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><a
+                href="#">{{ _infoPagePensionsRetirementService.infoPageSection2["section_title_h5"] }}</a></h5>
+            <p class="card-text">{{ _infoPagePensionsRetirementService.infoPageSection1["section_parrafo_h5"] }}</p>
+            <div class="read-more"><a (click)="abrirModal()"><i class="icofont-arrow-right"></i>Mas informacion</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Service Details Section -->

@@ -3,8 +3,8 @@
   <div class="container">
     <div class="d-flex justify-content-between align-items-center">
       <h2>Contact Us</h2>
-      <ol>       
- <li routerLinkActive="active"><a routerLink="dashboard">Home</a></li>
+      <ol>
+        <li routerLinkActive="active"><a routerLink="dashboard">Home</a></li>
         <li>Contact Us</li>
       </ol>
     </div>
@@ -56,19 +56,18 @@
 
       <div class="col-lg-6">
         <form
-          action="forms/contact.php"
-          method="post"
-          role="form"
-          class="php-email-form"
+          autocomplete="off"
+          [formGroup]="formaSol"
+          (ngSubmit)="guardarSolContactUs()"          
         >
           <div class="form-row">
             <div class="col-md-6 form-group">
               <input
-                type="text"
-                name="name"
-                class="form-control"
-                id="name"
+                type="text"               
+                class="form-control"               
+                formControlName="name"
                 placeholder="Ingrese su nombre"
+formControlName="name"
                 data-rule="minlen:4"
                 data-msg="Please enter at least 4 chars"
               />
@@ -77,22 +76,20 @@
             <div class="col-md-6 form-group">
               <input
                 type="email"
-                class="form-control"
-                name="email"
-                id="email"
+                class="form-control"               
+                formControlName="email"
                 placeholder="Correo electronico"
                 data-rule="email"
                 data-msg="Please enter a valid email"
               />
               <div class="validate"></div>
             </div>
-          </div>  
+          </div>
           <div class="form-group">
             <input
               type="text"
               class="form-control"
-              name="subject"
-              id="subject"
+              formControlName="subject"
               placeholder="Asunto o Motivo"
               data-rule="minlen:4"
               data-msg="Please enter at least 8 chars of subject"
@@ -102,21 +99,21 @@
           <div class="form-group">
             <textarea
               class="form-control"
-              name="message"
               rows="5"
+              formControlName="message"
               data-rule="required"
               data-msg="Please write something for us"
               placeholder="Ingrese un mensaje"
             ></textarea>
             <div class="validate"></div>
           </div>
-          <div class="mb-3">
+          <!-- <div class="mb-3">
             <div class="loading">Loading</div>
             <div class="error-message"></div>
             <div class="sent-message">
               Your message has been sent. Thank you!
             </div>
-          </div>
+          </div> -->
           <div class="text-center">
             <button type="submit">Send Message</button>
           </div>
@@ -132,9 +129,23 @@
   <div class="container-fluid p-0">
     <iframe
       src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJPQWaFlVYKowR8CUpyFw8o78&key=AIzaSyD3FW1xxOn7_h7CQ6wniDh9OFbfTWxMCPc"
-      frameborder="0" style="border: 0"
+      frameborder="0"
+      style="border: 0"
       allowfullscreen=""
     ></iframe>
   </div>
 </section>
 <!-- End Map Section -->
+
+<hr />
+<pre>
+  Estado del Formulario: {{ formaSol.valid }}
+  <br>
+  Status: {{ formaSol.status }}
+</pre>
+
+<pre>
+
+  {{ formaSol.value | json }}
+
+</pre>

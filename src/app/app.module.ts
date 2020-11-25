@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -20,6 +21,7 @@ import { InternationalPresenceComponent } from './pages/international-presence/i
 import { ScheduleSavingsComponent } from './pages/schedule-savings/schedule-savings.component';
 import { AnnuitiesComponent } from './pages/annuities/annuities.component';
 import { UniversityPlanComponent } from './pages/university-plan/university-plan.component';
+import { PensionsRetirementsComponent } from './pages/pensions-retirements/pensions-retirements.component';
 
 
 @NgModule({
@@ -40,12 +42,15 @@ import { UniversityPlanComponent } from './pages/university-plan/university-plan
     InternationalPresenceComponent,
     ScheduleSavingsComponent,
     AnnuitiesComponent,
-    UniversityPlanComponent
+    UniversityPlanComponent,
+    PensionsRetirementsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    HttpClientModule
+    HttpClientModule, 
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -20,6 +20,8 @@ export class InfoPageAppcomponentService {
   infoPageSection1: InfoPageSection = {};
   infoPageSection2: InfoPageSection = {};
   infoPageSection3: InfoPageSection = {};
+  infoPageSection: InfoPageSection = {};
+  
 
 
   constructor(private http: HttpClient) { 
@@ -52,10 +54,21 @@ export class InfoPageAppcomponentService {
         this.infoPageSection1 = this.infoPageAppServices.page_section[0];
         this.infoPageSection2 = this.infoPageAppServices.page_section[1];
         this.infoPageSection3 = this.infoPageAppServices.page_section[2];
+        this.infoPageSection.page_section = this.infoPageAppServices.page_section;
 
         console.log(this.infoPageSection1);
         console.log(this.infoPageSection2);
         console.log(this.infoPageSection3);
+        
+        console.log(this.infoPageSection);
+
+        console.log("entre");
+
+        console.log(this.infoPageSection.page_section);      
+        
+        console.log("sali");
+
+        
 
         //    this.pageSectionWhyus = this.infoPageServices.page_section[1]
       });
