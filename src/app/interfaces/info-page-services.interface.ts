@@ -38,3 +38,21 @@ export interface InfoPageSection {
         section_url_img?: string;
     }         
 }
+
+export interface SolRequest {
+    subject?: string; 
+    name?: string;
+    message?: string;
+    email?: string;
+}
+
+export interface ResponseServiceSingle {
+    error?: string;
+    mensaje?: string;    
+}
+
+export interface ResponseServiceSingleWithID{
+    error?: string;
+    mensaje?: string;  
+    id?: string;    
+}
