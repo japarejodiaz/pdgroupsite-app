@@ -1,12 +1,15 @@
-<div class="fondo-modal-form animated fadeIn fast"
-    [class.oculto-form]="modelFormService.ocultarModal">
+<div
+  class="fondo-modal-form animated fadeIn fast"
+  [class.oculto-form]="modelFormService.ocultarModal"
+>
   <div
     class="modal fade show"
     id="exampleModal"
     tabindex="-1"
     role="dialog"
     aria-labelledby="exampleModalLabel1"
-    style="display: block">
+    style="display: block"
+  >
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -20,7 +23,7 @@
             class="close"
             data-dismiss="modal"
             aria-label="Cerrar"
-            (click)="cerrarModal()" 
+            (click)="cerrarModal()"
           >
             <span aria-hidden="true">
               <font style="vertical-align: inherit">
@@ -30,61 +33,100 @@
           </button>
         </div>
         <div class="modal-body">
-          <form>
-           <!--  <div class="form-group">
-              <label for="recipient-name" class="control-label">
-                <font style="vertical-align: inherit">
-                  <font style="vertical-align: inherit">Recipiente:</font>
-                </font>
-              </label>
-              <input type="text" class="form-control" id="recipient-name1" />
+          <form
+            autocomplete="off"
+            role="form"
+            class="php-email-form"
+            [formGroup]="formaSolModal"
+            (ngSubmit)="guardarSolModal()"
+          >
+            <div class="form-row">
+              <div class="col-md-6 form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="name"
+                  [class.is-invalid]="nameNoValido"
+                  placeholder="Ingrese su nombre y apellido"
+                />
+                <small *ngIf="nameNoValido" class="text-danger">
+                  Ingrese al menos 5 caracteres para el nombre y apellido
+                </small>
+              </div>
+              <div class="col-md-6 form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Ingrese su Correo electronico"
+                  formControlName="email"
+                  [class.is-invalid]="emailNoValido"
+                />
+                <small *ngIf="emailNoValido" class="text-danger">
+                  Formato de correo incorrecto, Verifique!!!
+                </small>
+              </div>
             </div>
             <div class="form-group">
-              <label for="message-text" class="control-label">
-                <font style="vertical-align: inherit">
-                  <font style="vertical-align: inherit">Mensaje:</font>
-                </font>
-              </label>
-              <textarea class="form-control" id="message-text1"></textarea>
-            </div> -->
+              <input
+                type="text"
+                class="form-control"
+                formControlName="subject"
+                placeholder="Ingrese o asunto o motivo..."
+                [class.is-invalid]="subjectNoValido"
+              />
+              <small *ngIf="subjectNoValido" class="text-danger">
+                Ingrese el motivo o asunto...
+              </small>
+            </div>
+            <div class="form-group">
+              <textarea
+                class="form-control"
+                rows="5"
+                formControlName="message"
+                placeholder="Ingrese su mensaje..."
+                [class.is-invalid]="messageNoValido"
+              ></textarea>
+              <small *ngIf="messageNoValido" class="text-danger">
+                Ingrese su mensaje para su solicitud...
+              </small>
+            </div>
 
-             <div class="form-row">
-               <div class="col-md-6 form-group">
-                 <input type="text" name="name" class="form-control" id="name" placeholder="Ingrese su nombre"
-                   data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                 <div class="validate"></div>
-               </div>
-               <div class="col-md-6 form-group">
-                 <input type="email" class="form-control" name="email" id="email" placeholder="Correo electronico"
-                   data-rule="email" data-msg="Please enter a valid email" />
-                 <div class="validate"></div>
-               </div>
-             </div>
-             <div class="form-group">
-               <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto o Motivo"
-                 data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-               <div class="validate"></div>
-             </div>
-             <div class="form-group">
-               <textarea class="form-control" name="message" rows="5" data-rule="required"
-                 data-msg="Please write something for us" placeholder="Ingrese un mensaje"></textarea>
-               <div class="validate"></div>
-             </div>
-             
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-default"
+                data-dismiss="modal"
+                (click)="cerrarModal()"
+              >
+                <font style="vertical-align: inherit">
+                  <font style="vertical-align: inherit">Cancelar</font>
+                </font>
+              </button>
+              <button type="submit" class="btn btn-primary">
+                <font style="vertical-align: inherit">
+                  <font style="vertical-align: inherit">Enviar Solicitud</font>
+                </font>
+              </button>
+            </div>
           </form>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal" (click)="cerrarModal()">
+        <!--  <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-default"
+            data-dismiss="modal"
+            (click)="cerrarModal()"
+          >
             <font style="vertical-align: inherit">
               <font style="vertical-align: inherit">Cancelar</font>
             </font>
           </button>
-          <button type="button" class="btn btn-primary">
+          <button type="submit" class="btn btn-primary">
             <font style="vertical-align: inherit">
               <font style="vertical-align: inherit">Enviar Solicitud</font>
             </font>
           </button>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

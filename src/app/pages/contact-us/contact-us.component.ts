@@ -23,9 +23,10 @@ export class ContactUsComponent implements OnInit {
 
   responseWithID: ResponseServiceSingleWithID = {};
 
-  constructor(public pageService: InfoPageService, public _infoSendNotificationsService: SendNotificationsService,
-    private fb: FormBuilder,
-    public contactUsService: InfoPageContactUsService) { }
+  constructor(public pageService: InfoPageService,
+              public _infoSendNotificationsService: SendNotificationsService,
+              private fb: FormBuilder,
+              public contactUsService: InfoPageContactUsService) { }
 
   ngOnInit(): void {
 

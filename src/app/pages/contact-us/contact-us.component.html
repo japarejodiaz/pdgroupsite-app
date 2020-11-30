@@ -67,7 +67,6 @@
               <input
                 type="text"
                 class="form-control"
-                formControlName="name"
                 placeholder="Ingrese su nombre y apellido"
                 formControlName="name"
                 [class.is-invalid]="nameNoValido"
@@ -94,7 +93,7 @@
               type="text"
               class="form-control"
               formControlName="subject"
-              placeholder="Asunto o Motivo"
+              placeholder="Ingrese o asunto o motivo..."
               [class.is-invalid]="subjectNoValido"
             />
             <small *ngIf="subjectNoValido" class="text-danger">
