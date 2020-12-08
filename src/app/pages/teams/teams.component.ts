@@ -19,6 +19,10 @@ export class TeamsComponent implements OnInit {
   
     console.log("lleuge al servicio");
     console.log(paramAux);
+    
+    this._modalService.abrirModal();
+
+  
   
   }
 
