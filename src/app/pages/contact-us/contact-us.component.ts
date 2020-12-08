@@ -103,8 +103,16 @@ export class ContactUsComponent implements OnInit {
     this.solRequest.subject = this.formaSol.value.subject;
     this.solRequest.email = this.formaSol.value.email;
     // console.log(this.formaSol.value.name);
-
-
+    
+    Swal.fire({
+       position: 'top-end',
+      icon: 'info',
+      title: 'Por favor espere...',
+      text: 'Guardando la informacion...',
+      allowOutsideClick: false,
+      timer: 5000
+    });
+    Swal.showLoading();
 
     this.contactUsService.buscarContactUs_SolRequest(this.solRequest).subscribe
       ((response: ResponseServiceSingle) => {

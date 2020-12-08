@@ -112,7 +112,6 @@ export class ModalFormComponent implements OnInit {
     // sitio a donde se envia a servicio de salvar los datos
     // Posteo de información, limpia los datos
 
-
     this.solRequest.name = this.formaSolModal.value.name;
     this.solRequest.message = this.formaSolModal.value.message;
     this.solRequest.subject = this.formaSolModal.value.subject;
