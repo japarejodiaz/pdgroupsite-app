@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalFormService } from 'src/app/services/modal-form.service';
 import { InfoPageTeamsService } from '../../services/info-page-teams.service';
 
 @Component({
@@ -8,9 +9,17 @@ import { InfoPageTeamsService } from '../../services/info-page-teams.service';
 })
 export class TeamsComponent implements OnInit {
 
-  constructor(public _infoPageTeamsService: InfoPageTeamsService) { }
+  constructor(public _infoPageTeamsService: InfoPageTeamsService,
+              public _modalService: ModalFormService) { }
 
   ngOnInit(): void {
+  }
+  
+  abrirModalWithParameter(paramAux: string) {
+  
+    console.log("lleuge al servicio");
+    console.log(paramAux);
+  
   }
 
 }

@@ -22,6 +22,7 @@ import { ScheduleSavingsComponent } from './pages/schedule-savings/schedule-savi
 import { AnnuitiesComponent } from './pages/annuities/annuities.component';
 import { UniversityPlanComponent } from './pages/university-plan/university-plan.component';
 import { PensionsRetirementsComponent } from './pages/pensions-retirements/pensions-retirements.component';
+import { ModalFormTeamsComponent } from './modal-form-team/modal-form-teams/modal-form-teams.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { PensionsRetirementsComponent } from './pages/pensions-retirements/pensi
     ScheduleSavingsComponent,
     AnnuitiesComponent,
     UniversityPlanComponent,
-    PensionsRetirementsComponent
+    PensionsRetirementsComponent,
+    ModalFormTeamsComponent
   ],
   imports: [
     BrowserModule,

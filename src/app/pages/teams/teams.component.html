@@ -36,8 +36,9 @@
               <!-- <a *ngIf="itemsPage.id_social_net === 'true'" href=""><i class="icofont-instagram"></i></a> -->
               <a *ngIf="itemsPage.linkedin_have === '1'" href="{{ itemsPage.url_linkedin_social_net }}"><i
                   class="icofont-linkedin"></i></a>
-              <a *ngIf="itemsPage.whatsapp_have === '1'" href="{{ itemsPage.url_whatsapp_social_net }}"><i
-                  class="icofont-whatsapp"></i></a>
+              <a *ngIf="itemsPage.whatsapp_have === '1'" 
+                            (click)="abrirModalWithParameter( itemsPage.address_uri_qr_whatsapp )"
+><i class="icofont-whatsapp"></i></a>
               </div>
           </div>
           <div class="member-info">

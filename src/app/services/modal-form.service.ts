@@ -23,5 +23,12 @@ export class ModalFormService {
     this._ocultarModal = true;
   }
   
+  abrirModalWithparameter( param: string ) {
+
+    console.log(param);
+  
+    this._ocultarModal = false;
+  }
+  
   
 }
