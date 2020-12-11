@@ -83,11 +83,7 @@ export class ModalFormComponent implements OnInit {
         message: ['', [Validators.required, Validators.minLength(25)]]
       }
     );
-  }
-  
-  guardarSolModal2() {
-   console.log("pruebas") 
-  }
+  }  
   
   
   guardarSolModal() {

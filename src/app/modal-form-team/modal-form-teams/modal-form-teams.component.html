@@ -1,21 +1,61 @@
 <p>modal-form-teams works!</p>
 
-
-<div class="modal fade show" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle"
-  style="display: block; padding-right: 15px;" aria-modal="true" role="dialog">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-          quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+<div
+  class="fondo-modal-form2 animated fadeIn fast"
+  [class.oculto-form2]="modalFormTeamsService.ocultarModalT"
+>
+  <div
+    class="modal fade show"
+    id="exampleModalCenter"
+    tabindex="-1"
+    aria-labelledby="exampleModalCenterTitle"
+    style="display: block"
+    role="dialog"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">
+            Whatsapp QR
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+            (click)="cerrarModalT()"
+          >
+            <span aria-hidden="true">
+              <font style="vertical-align: inherit">
+                <font style="vertical-align: inherit">X</font>
+              </font>
+            </span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div align="center">
+            <img src="assets/img/team/members/qr/{{ modalFormTeamsService.img1 }}"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+          <p font-style="ital">
+            Escanea con tu smartphone la imagen QR, para que te comuniques con
+            nuestro equipo de ventas.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-info"
+            data-bs-dismiss="modal"
+            (click)="cerrarModalT()"
+          >
+            <font style="vertical-align: inherit">
+              <font style="vertical-align: inherit">Cerrar</font>
+            </font>
+          </button>
+        </div>
       </div>
     </div>
   </div>

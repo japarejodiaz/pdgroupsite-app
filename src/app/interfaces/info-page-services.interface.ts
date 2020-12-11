@@ -57,7 +57,7 @@ export interface ResponseServiceSingleWithID {
     id?: string;
 }
 export interface InfoPageTeams {
-    error?: string,
+    error?: string;
     numero_registros?: number;
     page_section?:
     {
@@ -82,4 +82,7 @@ export interface InfoPageTeams {
         linkedin_have?: boolean;
         url_linkedin_social_net?: string;
     }
+}
+export interface SolSubscription {
+    email_subscription?: string;
 }

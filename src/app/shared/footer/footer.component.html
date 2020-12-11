@@ -1,18 +1,41 @@
 <!-- ======= Footer ======= -->
-<footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
-
+<footer
+  id="footer"
+  data-aos="fade-up"
+  data-aos-easing="ease-in-out"
+  data-aos-duration="500"
+>
   <div class="footer-newsletter">
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
           <h4>Our newsletter</h4>
-          <p>Subscribete a nuestro boletín informativo para enviarte las ultimas noticias de nuestros productos
-              y nuestros programas de adiestramiento.
-            </p>
+          <p>
+            Subscribete a nuestro boletín informativo para enviarte las ultimas
+            noticias de nuestros productos y nuestros programas de
+            adiestramiento.
+          </p>
         </div>
         <div class="col-lg-6">
-          <form action="" method="post">
-            <input type="email" name="email"><input type="button" value="Subscribete">
+          <form
+            autocomplete="off"
+            role="form"
+            [formGroup]="formaSubscription"
+            (ngSubmit)="guardarSubscription()"
+          >
+            
+              <input
+                type="email"
+                class="form-control"
+                formControlName="email_subscription"
+                placeholder="Ingrese su correo..."
+                [class.is-invalid]="emailNoValido"
+              />
+              <small *ngIf="emailNoValido" class="text-danger">
+                Formato de correo es incorrecto, verifique...
+              </small>
+              <input type="submit" value="Subscribete" />
+           
           </form>
         </div>
       </div>
@@ -22,27 +45,59 @@
   <div class="footer-top">
     <div class="container">
       <div class="row">
-
         <div class="col-lg-3 col-md-6 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><i class="bx bx-chevron-right"></i> <a routerLink="dashboard">Home</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a routerLink="about-us">About Us</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a routerLink="services">Products</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a routerLink="teams">Teams</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a routerLink="development-professional">Professional Development</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a routerLink="contact-us">Contact Us</a></li>
+            <li>
+              <i class="bx bx-chevron-right"></i>
+              <a routerLink="dashboard">Home</a>
+            </li>
+            <li>
+              <i class="bx bx-chevron-right"></i>
+              <a routerLink="about-us">About Us</a>
+            </li>
+            <li>
+              <i class="bx bx-chevron-right"></i>
+              <a routerLink="services">Products</a>
+            </li>
+            <li>
+              <i class="bx bx-chevron-right"></i>
+              <a routerLink="teams">Teams</a>
+            </li>
+            <li>
+              <i class="bx bx-chevron-right"></i>
+              <a routerLink="development-professional"
+                >Professional Development</a
+              >
+            </li>
+            <li>
+              <i class="bx bx-chevron-right"></i>
+              <a routerLink="contact-us">Contact Us</a>
+            </li>
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-6 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><i class="bx bx-chevron-right"></i> <a routerLink="services">Jubilaciones y Pensiones</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a routerLink="services">Inversiones</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a routerLink="services">Seguros de Vida</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a routerLink="development-professional">Oportunidades de
-                Carrera</a></li>
+            <li>
+              <i class="bx bx-chevron-right"></i>
+              <a routerLink="services">Jubilaciones y Pensiones</a>
+            </li>
+            <li>
+              <i class="bx bx-chevron-right"></i>
+              <a routerLink="services">Inversiones</a>
+            </li>
+            <li>
+              <i class="bx bx-chevron-right"></i>
+              <a routerLink="services">Seguros de Vida</a>
+            </li>
+            <li>
+              <i class="bx bx-chevron-right"></i>
+              <a routerLink="development-professional"
+                >Oportunidades de Carrera</a
+              >
+            </li>
             <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li> -->
           </ul>
         </div>
@@ -50,39 +105,43 @@
         <div class="col-lg-3 col-md-6 footer-contact">
           <h4>Contact Us</h4>
           <p>
-            {{ pageService.infoPagina.direccion1 }}<br>
-            {{ pageService.infoPagina.direccion2 }}<br>
-            {{ pageService.infoPagina.direccion3 }}<br>
-            {{ pageService.infoPagina.direccion4 }}<br>
-            {{ pageService.infoPagina.direccion5 }}<br><br>
-            <strong>Phone:</strong>{{ pageService.infoPagina.phone_number }}<br>
-            <strong>Phone:</strong>+58 412 233 4444<br>
-                        <strong>Email:</strong>{{ pageService.infoPagina.email }}<br>
+            {{ pageService.infoPagina.direccion1 }}<br />
+            {{ pageService.infoPagina.direccion2 }}<br />
+            {{ pageService.infoPagina.direccion3 }}<br />
+            {{ pageService.infoPagina.direccion4 }}<br />
+            {{ pageService.infoPagina.direccion5 }}<br /><br />
+            <strong>Phone:</strong>{{ pageService.infoPagina.phone_number
+            }}<br />
+            <strong>Phone:</strong>+58 412 233 4444<br />
+            <strong>Email:</strong>{{ pageService.infoPagina.email }}<br />
           </p>
         </div>
 
         <div class="col-lg-3 col-md-6 footer-info">
           <h3>Acerca de {{ pageService.infoPagina.titulo }}</h3>
-          <p>{{ pageService.infoPagina.titulo }} es una agencia perteneciente a International Marketing Group
-            (www.img-sa.com), representante
-            exclusivo de Trinity American Inc. (www. firsttrinityfinancial.com), con una amplia experiencia en el
-            mercado de seguros.</p>
+          <p>
+            {{ pageService.infoPagina.titulo }} es una agencia perteneciente a
+            International Marketing Group (www.img-sa.com), representante
+            exclusivo de Trinity American Inc. (www. firsttrinityfinancial.com),
+            con una amplia experiencia en el mercado de seguros.
+          </p>
           <div class="social-links mt-3">
-          <!--   <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
+            <!--   <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
             <!-- <a [href]="pageService.infoPagina.facebook" class="facebook"><i class="bx bxl-facebook"></i></a>  -->
-            <a [href]="pageService.infoPagina.linkedin" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            <a [href]="pageService.infoPagina.linkedin" class="linkedin"
+              ><i class="bx bxl-linkedin"></i
+            ></a>
             <!-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> -->
-           
           </div>
         </div>
-
       </div>
     </div>
   </div>
 
   <div class="container">
     <div class="copyright">
-      &copy; {{ anio }} Copyright <strong><span>PDGroup</span></strong>. All Rights Reserved
+      &copy; {{ anio }} Copyright <strong><span>PDGroup</span></strong
+      >. All Rights Reserved
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->
@@ -93,4 +152,5 @@
       Designed by <a>Desarrollo y Soluciones TI</a>
     </div>
   </div>
-</footer><!-- End Footer -->
+</footer>
+<!-- End Footer -->

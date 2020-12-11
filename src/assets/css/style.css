@@ -2479,6 +2479,7 @@ section {
 .oculto-form {
   display: none;
 }
+
 #centrador{
   position: relative;
   width: 400px;
@@ -2495,3 +2496,20 @@ section {
     bottom: 0;
     margin: auto;
 }
+
+.fondo-modal-form2 {
+    background-color: rgba(0, 0, 0, 0.4);
+    left: 0px;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 8888;
+    padding-top: 50;
+    vertical-align: middle center;
+}
+
+.oculto-form2 {
+  display: none;
+}
+
