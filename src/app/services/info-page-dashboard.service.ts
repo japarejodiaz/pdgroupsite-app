@@ -25,8 +25,7 @@ export class InfoPageDashboardService {
   infoPageSection4: InfoPageSection = {};
   
   pageSectionWhyus1: InfoPageSection = {};
-  pageSectionWhyus2: InfoPageSection = {};
-  
+  pageSectionWhyus2: InfoPageSection = {};  
     
   pageSectionFeatures1: InfoPageSection = {};
   pageSectionFeatures2: InfoPageSection = {};
@@ -78,13 +77,6 @@ export class InfoPageDashboardService {
         console.log(this.infoPageSection4);
 
         //    this.pageSectionWhyus = this.infoPageServices.page_section[1]
-
-       
-
-
-
-
-
         
       });
   }
@@ -100,10 +92,10 @@ export class InfoPageDashboardService {
 
         this.infoPageServicesWhyUs = response;
         /** Seccion de Whyus*/
-
         this.pageSectionWhyus1 = this.infoPageServicesWhyUs.page_section[0];
         this.pageSectionWhyus2 = this.infoPageServicesWhyUs.page_section[1];
         console.log(this.infoPageServicesWhyUs);
+
       });
 
   }
@@ -118,7 +110,7 @@ export class InfoPageDashboardService {
       .subscribe((response: InfoPageServices) => {
 
         this.infoPageServicesFeatures = response;
-        /** Seccion de Whyus*/
+        /** Seccion de Features */
 
         this.pageSectionFeatures1 = this.infoPageServicesFeatures.page_section[0];
         this.pageSectionFeatures2 = this.infoPageServicesFeatures.page_section[1];

@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "pdgroupSite"
+    }
+  },
+  "defaultProject": "pdgroupSite",
+  "cli": {
+    "analytics": "4512e236-6b32-4408-a58a-49d5ce1939dd"
+  }
 }

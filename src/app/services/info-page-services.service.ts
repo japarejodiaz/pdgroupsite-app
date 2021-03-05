@@ -22,10 +22,13 @@ export class InfoPageServicesService {
   infoPageSection2: InfoPageSection = {};
   infoPageSection3: InfoPageSection = {};
   infoPageSection4: InfoPageSection = {};
+  infoPageSection5: InfoPageSection = {};
 
   pageSectionWhyus1: InfoPageSection = {};
   pageSectionWhyus2: InfoPageSection = {};
   pageSectionWhyus3: InfoPageSection = {};
+  pageSectionWhyus4: InfoPageSection = {};
+  pageSectionWhyus5: InfoPageSection = {};
 
   constructor(private http: HttpClient) {
 
@@ -53,6 +56,7 @@ export class InfoPageServicesService {
         this.infoPageSection2 = this.infoPageServices.page_section[1];
         this.infoPageSection3 = this.infoPageServices.page_section[2];
         this.infoPageSection4 = this.infoPageServices.page_section[3];
+        this.infoPageSection5 = this.infoPageServices.page_section[4];
         //    this.pageSectionWhyus = this.infoPageServices.page_section[1]
 
         // console.log(this.infoPageSection["section_parrafo_h4"]);
@@ -89,7 +93,8 @@ export class InfoPageServicesService {
         this.pageSectionWhyus1 = this.infoPageServicesWhyUs.page_section[0];
         this.pageSectionWhyus2 = this.infoPageServicesWhyUs.page_section[1];
         this.pageSectionWhyus3 = this.infoPageServicesWhyUs.page_section[2];
-
+        this.pageSectionWhyus4 = this.infoPageServicesWhyUs.page_section[3];
+        this.pageSectionWhyus5 = this.infoPageServicesWhyUs.page_section[4];
         //    this.pageSectionWhyus = this.infoPageServices.page_section[1]
 
         // console.log(this.infoPageSection["section_parrafo_h4"]);

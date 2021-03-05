@@ -11,9 +11,7 @@ export class ServicesComponent implements OnInit {
 
 
   constructor(public _infoPageService: InfoPageServicesService,
-  private modalFormService: ModalFormService) {
-     
-
+    private modalFormService: ModalFormService) {
   }
 
   ngOnInit(): void {}
