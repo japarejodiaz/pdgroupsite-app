@@ -1,56 +1,48 @@
 <!-- ======= Our Team Section ======= -->
 <section class="breadcrumbs">
-  <div class="container">
-    <div class="d-flex justify-content-between align-items-center">
-      <h2>Our Team</h2>
-      <ol>
-        <li><a routerLink="dashboard">Home</a></li>
-        <li>Our Team</li>
-      </ol>
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>Our Team</h2>
+            <ol>
+                <li><a routerLink="dashboard">Home</a></li>
+                <li>Our Team</li>
+            </ol>
+        </div>
     </div>
-  </div>
 </section>
 <!-- End Our Team Section -->
 
 <!-- ======= Team Section ======= -->
-<section
-  class="team"
-  data-aos="fade-up"
-  data-aos-easing="ease-in-out"
-  data-aos-duration="500"
->
-  <div class="container">
-    <div class="row">
-      <div
-        *ngFor="let itemsPage of _infoPageTeamsService.infoPageTeamsServices.page_section"
-        class="col-lg-4 col-md-6 d-flex align-items-stretch">
-        <div class="member">
-          <div class="member-img">
-            <img src="assets/img/team/members/{{ itemsPage.url_img_member_teams }}" class="img-fluid" alt="" />
-            <!-- <div *ngFor="let itemSocialDetail of _infoPageTeamsService.infoPageTeamsServices.page_section.detalle_social_net"  -->
-            <div class="social">
+<section class="team" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let itemsPage of _infoPageTeamsService.infoPageTeamsServices.page_section" class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                    <div class="member-img">
+                        <img src="assets/img/team/members/{{ itemsPage.url_img_member_teams }}" class="img-fluid" alt="" />
+                        <!-- <div *ngFor="let itemSocialDetail of _infoPageTeamsService.infoPageTeamsServices.page_section.detalle_social_net"  -->
+                        <div class="social">
 
-              <a *ngIf="itemsPage.twitter_have === '1'" href="{{ itemsPage.url_twitter_social_net }}"><i class="icofont-twitter"></i></a>
-              <a *ngIf="itemsPage.facebook_have === '1'" href="{{ itemsPage.url_facebook_social_net }}"><i
+                            <a *ngIf="itemsPage.twitter_have === '1'" href="{{ itemsPage.url_twitter_social_net }}"><i class="icofont-twitter"></i></a>
+                            <a *ngIf="itemsPage.facebook_have === '1'" href="{{ itemsPage.url_facebook_social_net }}"><i
                   class="icofont-facebook"></i></a>
-              <!-- <a *ngIf="itemsPage.id_social_net === 'true'" href=""><i class="icofont-instagram"></i></a> -->
-              <a *ngIf="itemsPage.linkedin_have === '1'" href="{{ itemsPage.url_linkedin_social_net }}"><i
+                            <!-- <a *ngIf="itemsPage.id_social_net === 'true'" href=""><i class="icofont-instagram"></i></a> -->
+                            <a *ngIf="itemsPage.linkedin_have === '1'" href="{{ itemsPage.url_linkedin_social_net }}"><i
                   class="icofont-linkedin"></i></a>
-              <a *ngIf="itemsPage.whatsapp_have === '1'" 
-                            (click)="abrirModalWithParameter( itemsPage.address_uri_qr_whatsapp,  itemsPage.teams_nombres, itemsPage.teams_apellidos )"><i
+                            <a *ngIf="itemsPage.whatsapp_have === '1'" (click)="abrirModalWithParameter( itemsPage.address_uri_qr_whatsapp,  itemsPage.teams_nombres, itemsPage.teams_apellidos )"><i
                               class="icofont-whatsapp"></i></a>
-              </div>
-          </div>
-          <div class="member-info">
-            <h4>{{ itemsPage.teams_nombres }} {{ itemsPage.teams_apellidos}}</h4>
-            <span>{{ itemsPage.name_position }}</span>
-            <span>{{ itemsPage.name_country }}</span>
-            <p font-style="ital">{{ itemsPage.teams_parrafo_card }}</p>
-          </div>
-        </div>
-      </div>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>{{ itemsPage.teams_nombres }} {{ itemsPage.teams_apellidos}}</h4>
+                        <span>{{ itemsPage.name_position }}</span>
+                        <span>{{ itemsPage.name_country }}</span>
+                        <p font-style="ital">{{ itemsPage.teams_parrafo_card }}</p>
+                    </div>
+                </div>
+            </div>
 
-      <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
         <div class="member">
           <div class="member-img">
             <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="" />
@@ -73,7 +65,7 @@
         </div> 
       </div> -->
 
-      <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
         <div class="member">
           <div class="member-img">
             <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="" />
@@ -97,7 +89,7 @@
         </div>
       </div> -->
 
-      <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
         <div class="member">
           <div class="member-img">
             <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="" />
@@ -120,7 +112,7 @@
         </div>
       </div> -->
 
-      <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
         <div class="member">
           <div class="member-img">
             <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="" />
@@ -144,7 +136,7 @@
         </div>
       </div> -->
 
-      <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
         <div class="member">
           <div class="member-img">
             <img src="assets/img/team/team-5.jpg" class="img-fluid" alt="" />
@@ -170,7 +162,7 @@
         </div>
       </div> -->
 
-      <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
         <div class="member">
           <div class="member-img">
             <img src="assets/img/team/team-6.jpg" class="img-fluid" alt="" />
@@ -194,7 +186,7 @@
           </div>
         </div>
       </div> -->
+        </div>
     </div>
-  </div>
 </section>
 <!-- End Team Section -->

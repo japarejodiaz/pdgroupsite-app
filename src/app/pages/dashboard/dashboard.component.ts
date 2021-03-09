@@ -9,9 +9,7 @@ import { ModalFormService } from '../../services/modal-form.service';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
-
-  
+export class DashboardComponent implements OnInit {  
   
   correo: string = 'japarejo.diaz@gmail.com';
   contrasena: string = '123456';
@@ -28,8 +26,7 @@ export class DashboardComponent implements OnInit {
 
   ingresar() {
   
-    this.tokenService.ingresar(this.correo, this.contrasena);
-      
+    this.tokenService.ingresar(this.correo, this.contrasena);      
   
   }
   

@@ -17,7 +17,7 @@ export class TeamsComponent implements OnInit {
   
   abrirModalWithParameter(paramAux: string, nombres: string, apellidos: string) {
   
-    console.log("lleuge al servicio");
+    // console.log("lleuge al servicio");
     console.log(paramAux);
     console.log(apellidos);
     console.log(nombres);
