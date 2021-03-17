@@ -11,7 +11,7 @@ import { InfoPageDevelopmentProfesionalService } from '../../services/info-page-
   templateUrl: './development-profesional.component.html',
   styleUrls: ['./development-profesional.component.css']
 })
-  
+
 export class DevelopmentProfesionalComponent implements OnInit {
 
   formaSol: FormGroup;
@@ -20,13 +20,12 @@ export class DevelopmentProfesionalComponent implements OnInit {
 
   responseSolRequest: ResponseServiceSingle = {};
   responseSolRequestN: ResponseServiceSingle = {};
-
   responseWithID: ResponseServiceSingleWithID = {};
 
   constructor(public pageService: InfoPageService,
-              public _infoSendNotificationsService: SendNotificationsService,
-              private fb: FormBuilder,
-              public _infoDevelopmentService: InfoPageDevelopmentProfesionalService) { }
+    public _infoSendNotificationsService: SendNotificationsService,
+    private fb: FormBuilder,
+    public _infoDevelopmentService: InfoPageDevelopmentProfesionalService) { }
 
   ngOnInit(): void {
 
@@ -69,7 +68,6 @@ export class DevelopmentProfesionalComponent implements OnInit {
       this.formaSol.get('message').invalid && this.formaSol.get('message').touched
     );
   }
-
   /********************
   * Rutina para validar el subject del mensaje
   * @title nameNoValido
@@ -103,9 +101,9 @@ export class DevelopmentProfesionalComponent implements OnInit {
     this.solRequest.subject = this.formaSol.value.subject;
     this.solRequest.email = this.formaSol.value.email;
     // console.log(this.formaSol.value.name);
-    
-     Swal.fire({
-       position: 'top-end',
+
+    Swal.fire({
+      position: 'top-end',
       icon: 'info',
       title: 'Por favor espere...',
       text: 'Guardando la informacion...',
@@ -144,9 +142,7 @@ export class DevelopmentProfesionalComponent implements OnInit {
                 /** Llama al servicio de notificaciones */
                 this._infoSendNotificationsService.enviarNotificaciones("1", "1", this.solRequest)
                   .subscribe((responseServiceN: ResponseServiceSingle) => {
-
                     this.responseSolRequestN = responseServiceN;
-
                     if (this.responseSolRequestN.error = "false") {
 
                       Swal.fire({
