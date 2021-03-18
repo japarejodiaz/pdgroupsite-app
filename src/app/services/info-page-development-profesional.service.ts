@@ -18,6 +18,7 @@ export class InfoPageDevelopmentProfesionalService {
   /** Seccion para consultas de Datos de developmentProfesionalComponent */
 
   infoPageDevelopmentServices: InfoPageServices = {};
+  infoPageDevelopmentServices2: InfoPageServices = {};
 
   idpageP: number = 4;
   idsectionP: number = 4;
@@ -26,6 +27,7 @@ export class InfoPageDevelopmentProfesionalService {
   infoPageSection2: InfoPageSection = {};
   infoPageSection3: InfoPageSection = {};
   infoPageSection4: InfoPageSection = {};
+  infoPageSection5: InfoPageSection = {};
 
   pageSectionWhyus1: InfoPageSection = {};
   pageSectionWhyus2: InfoPageSection = {};
@@ -41,6 +43,7 @@ export class InfoPageDevelopmentProfesionalService {
   image2: string;
   image3: string;
   image4: string;
+  image5: string;
 
   constructor(private httpContactUs: HttpClient) {
 
@@ -93,10 +96,10 @@ export class InfoPageDevelopmentProfesionalService {
 
         console.log(this.infoPageDevelopmentServices);
 
-        this.infoPageSection1 = this.infoPageDevelopmentServices.page_section[0];
-        this.image1 = this.infoPageDevelopmentServices.page_section[0]["section_url_img"];
+        this.infoPageSection5 = this.infoPageDevelopmentServices.page_section[0];
+        this.image5 = this.infoPageDevelopmentServices.page_section[0]["section_url_img"];
 
-        console.log(this.infoPageSection1);
+        console.log(this.infoPageSection5);
 
       });
   }
@@ -111,19 +114,18 @@ export class InfoPageDevelopmentProfesionalService {
     return this.httpContactUs.get(urlFinal + `${token}/${usuario}/${idpage}/${idSection}`)
       .subscribe((response: InfoPageServices) => {
 
-        this.infoPageDevelopmentServices = response;
+        this.infoPageDevelopmentServices2 = response;
+
         /** Seccion de Services */
 
-        console.log(this.infoPageDevelopmentServices);
-
-        this.infoPageSection1 = this.infoPageDevelopmentServices.page_section[0];
-        this.image1 = this.infoPageDevelopmentServices.page_section[0]["section_url_img"]
-        this.infoPageSection2 = this.infoPageDevelopmentServices.page_section[1];
-        this.image2 = this.infoPageDevelopmentServices.page_section[1]["section_url_img"]
-        this.infoPageSection3 = this.infoPageDevelopmentServices.page_section[2];
-        this.image3 = this.infoPageDevelopmentServices.page_section[2]["section_url_img"]
-        this.infoPageSection4 = this.infoPageDevelopmentServices.page_section[3];
-        this.image4 = this.infoPageDevelopmentServices.page_section[3]["section_url_img"]
+        this.infoPageSection1 = this.infoPageDevelopmentServices2.page_section[0];
+        this.image1 = this.infoPageDevelopmentServices2.page_section[0]["section_url_img"]
+        this.infoPageSection2 = this.infoPageDevelopmentServices2.page_section[1];
+        this.image2 = this.infoPageDevelopmentServices2.page_section[1]["section_url_img"]
+        this.infoPageSection3 = this.infoPageDevelopmentServices2.page_section[2];
+        this.image3 = this.infoPageDevelopmentServices2.page_section[2]["section_url_img"]
+        this.infoPageSection4 = this.infoPageDevelopmentServices2.page_section[3];
+        this.image4 = this.infoPageDevelopmentServices2.page_section[3]["section_url_img"]
 
         console.log(this.infoPageSection1);
         console.log(this.infoPageSection2);

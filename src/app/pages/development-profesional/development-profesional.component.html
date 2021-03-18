@@ -19,27 +19,11 @@
             <div class="col-lg-6">
                 <img src="assets/img/about.jpg" class="img-fluid" alt="" />
             </div>
-            <div class="col-lg-6 pt-4 pt-lg-0">
-                <h3>Desarrollo Profesional</h3>
+            <div *ngFor="let itemsDevelopmentPages of _infoDevelopmentService.infoPageDevelopmentServices.page_section" class="col-lg-6 pt-4 pt-lg-0">
+                <h3>{{ itemsDevelopmentPages.section_title_h3 }} </h3>
+                <br>
                 <p class="font-normal">
-                    La constante renovación y capacitación de nuestro equipo, los motiva a ser más eficaces y eficientes, todo ello marcado por el deseo de superación, la adquisición de nuevos conocimientos, que les brindará crecimiento personal y profesional de acuerdo
-                    a su nivel de compromiso personal lo que les permitirá disfrutar de libertad financiera, en el ejercicio de una labor de gran relevancia y responsabilidad social para con innumerables familias dentro y fuera del país. Nuestra agencia
-                    les ofrece una vasta diversidad de formas de capacitación e incentivos, que repercutirán en su premiación dependiendo de su producción anual, desde viajes a otros países, cruceros, entre otros.
-                </p>
-                <ul>
-                    <li>
-                        <i class="icofont-check-circled"></i>Trabajamos constantemente para inspirar, capacitar, preparar y acompañar a otros en su crecimiento profesional dentro del mundo de la venta de Seguros de Vida.
-                    </li>
-                    <li>
-                        <i class="icofont-check-circled"></i>Nos enfocamos en el reclutamiento, selección y capacitación de Directivos profesionales en el área de ventas de Seguros de Vida y Planes de Jubilación en dólares estadounidenses.
-                    </li>
-                    <li>
-                        <i class="icofont-check-circled"></i> Creemos firmemente que los productos de Seguros de Vida que ofrecemos son una herramienta indispensable para la protección y seguridad de nuestros Clientes y sus familias.
-                    </li>
-                </ul>
-                <p>
-                    El compromiso con ustedes, nos obliga a estar en constante renovación y capacitación de nuestro equipo, motivándolos a ser más eficaces y eficientes, brindándoles la oportunidad de participar en convenciones a nivel nacional e internacional, adquiriendo
-                    premios por su producción anual, desde viajes a otros países, cruceros, entre otros.
+                    {{ itemsDevelopmentPages.section_parrafo_h3 }}
                 </p>
             </div>
         </div>
@@ -51,19 +35,19 @@
 <section class="service-details">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div *ngFor="let itemsDevelopmentPages2 of _infoDevelopmentService.infoPageDevelopmentServices2.page_section" class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
                 <div class="card">
                     <div class="card-img">
-                        <img src="assets/img/service-details-1.jpg" alt="...">
+                        <img src="assets/img/development/{{ itemsDevelopmentPages2.section_url_img }}" alt="...">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title"><a href="#">Convenciones</a></h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                        <h5 class="card-title"><a href="#">{{ itemsDevelopmentPages2.section_title_h5 }}</a></h5>
+                        <p class="card-text">{{ itemsDevelopmentPages2.section_parrafo_h5 }}</p>
 
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <!-- <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
                 <div class="card">
                     <div class="card-img">
                         <img src="assets/img/service-details-2.jpg" alt="...">
@@ -99,7 +83,7 @@
                         <p class="card-text">Nostrum eum sed et autem dolorum perspiciatis. Magni porro quisquam laudantium voluptatem. In molestiae earum ab sit esse voluptatem. Eos ipsam cumque ipsum officiis qui nihil aut incidunt aut</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>
