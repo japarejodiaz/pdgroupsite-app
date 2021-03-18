@@ -15,22 +15,20 @@
 <!-- ======= About Section ======= -->
 <section class="about" data-aos="fade-up">
     <div class="container">
-        <div class="row">
+        <div *ngFor="let itemsAboutUsPage of _InfoPageAboutUsService.infoPageAboutUsServices.page_section" class="row">
             <div class="col-lg-6">
-                <img src="assets/img/about-us/about-us-history.jpg" class="img-fluid" alt="" />
+                <img src="assets/img/about-us/{{ itemsAboutUsPage.section_url_img }}" class="img-fluid" alt="" />
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0">
                 <h3 align="center">
-                    Historia
+                    {{ itemsAboutUsPage.section_title_h5 }}
                 </h3>
                 <br>
                 <p class="font-normal">
-                    PDGroup, inicia sus actividades en el año 2015, como representante de International Marketing Group (www.img-sa.com), representante exclusivo de Trinity American Inc. (www. firsttrinityfinancial.com), empresas del ramo de seguros, que permitieron su empoderamiento
-                    y la expansión nacional e internacional como una de las agencias más productivas y sólidas dentro de mercado nacional en el área de seguros. En sus inicios contó con la participación de un pequeño grupo de asesores (2), contando en
-                    la actualidad con un equipo conformado por 12 asesores, distribuidos a nivel nacional e internacional (Venezuela, Chile, Colombia, Argentina, España.
+                    {{ itemsAboutUsPage.section_parrafo_h5 }}</p>
             </div>
         </div>
-        <br>
+        <!-- <br>
         <br>
         <br>
         <br>
@@ -82,7 +80,7 @@
             <div class="col-lg-6">
                 <img src="assets/img/about-us/about-us-bussiness-values.jpg" class="img-fluid" alt="" />
             </div>
-        </div>
+        </div> -->
     </div>
 </section>
 <!-- End About Section -->
