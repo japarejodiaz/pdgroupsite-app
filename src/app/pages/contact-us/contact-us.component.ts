@@ -103,9 +103,9 @@ export class ContactUsComponent implements OnInit {
     this.solRequest.subject = this.formaSol.value.subject;
     this.solRequest.email = this.formaSol.value.email;
     // console.log(this.formaSol.value.name);
-    
+
     Swal.fire({
-       position: 'top-end',
+      position: 'top-end',
       icon: 'info',
       title: 'Por favor espere...',
       text: 'Guardando la informacion...',

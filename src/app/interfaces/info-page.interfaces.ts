@@ -2,12 +2,13 @@ export interface InfoPagina {
     titulo?: string;
     email?: string;
     phone_number?: string;
+    phone_number2?: string;
     direccion1?: string;
     direccion2?: string;
     direccion3?: string;
     direccion4?: string;
-    direccion5?: string;    
-    pagina_autor?: string;    
+    direccion5?: string;
+    pagina_autor?: string;
     facebook?: string;
     linkedin?: string;
     twitter?: string;

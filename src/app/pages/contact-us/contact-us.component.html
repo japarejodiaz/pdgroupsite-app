@@ -1,137 +1,93 @@
 <!-- ======= Contact Section ======= -->
 <section class="breadcrumbs">
-  <div class="container">
-    <div class="d-flex justify-content-between align-items-center">
-      <h2>Contact Us</h2>
-      <ol>
-        <li routerLinkActive="active"><a routerLink="dashboard">Home</a></li>
-        <li>Contact Us</li>
-      </ol>
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>Contact Us</h2>
+            <ol>
+                <li routerLinkActive="active"><a routerLink="dashboard">Home</a></li>
+                <li>Contact Us</li>
+            </ol>
+        </div>
     </div>
-  </div>
 </section>
 <!-- End Contact Section -->
 
 <!-- ======= Contact Section ======= -->
-<section
-  class="contact"
-  data-aos="fade-up"
-  data-aos-easing="ease-in-out"
-  data-aos-duration="500"
->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6">
+<section class="contact" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+    <div class="container">
         <div class="row">
-          <div class="col-md-12">
-            <div class="info-box">
-              <i class="bx bx-map"></i>
-              <h3>Nuestra Direccion: </h3>
-              <p>
-                {{ pageService.infoPagina.direccion1 }}
-                {{ pageService.infoPagina.direccion2 }}
-                {{ pageService.infoPagina.direccion3 }}
-                {{ pageService.infoPagina.direccion4 }}
-                {{ pageService.infoPagina.direccion5 }}
-              </p>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="info-box">
+                            <i class="bx bx-map"></i>
+                            <h3>Nuestra Direccion: </h3>
+                            <p>
+                                {{ pageService.infoPagina.direccion1 }} {{ pageService.infoPagina.direccion2 }} {{ pageService.infoPagina.direccion3 }} {{ pageService.infoPagina.direccion4 }} {{ pageService.infoPagina.direccion5 }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-box">
+                            <i class="bx bx-envelope"></i>
+                            <h3>Nuestro Correo: </h3>
+                            <p>{{ pageService.infoPagina.email }}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-box">
+                            <i class="bx bx-phone-call"></i>
+                            <h3>Puedes llamarnos a: </h3>
+                            <p>{{ pageService.infoPagina.phone_number }}<br /></p>
+                            <p>{{ pageService.infoPagina.phone_number2 }}<br /></p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="info-box">
-              <i class="bx bx-envelope"></i>
-              <h3>Nuestro Correo: </h3>
-              <p>{{ pageService.infoPagina.email }}</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="info-box">
-              <i class="bx bx-phone-call"></i>
-              <h3>Puedes llamarnos a: </h3>
-              <p>{{ pageService.infoPagina.phone_number }}<br /></p>
-              <p>{{ pageService.infoPagina.phone_number }}<br /></p>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="col-lg-6">
-        <form
-          autocomplete="off"
-          role="form"
-          class="php-email-form"
-          [formGroup]="formaSol"
-          (ngSubmit)="guardarSolContactUs()"
-        >
-          <div class="form-row">
-            <div class="col-md-6 form-group">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Ingrese su nombre y apellido"
-                formControlName="name"
-                [class.is-invalid]="nameNoValido"
-              />
-              <small *ngIf="nameNoValido" class="text-danger">
+            <div class="col-lg-6">
+                <form autocomplete="off" role="form" class="php-email-form" [formGroup]="formaSol" (ngSubmit)="guardarSolContactUs()">
+                    <div class="form-row">
+                        <div class="col-md-6 form-group">
+                            <input type="text" class="form-control" placeholder="Ingrese su nombre y apellido" formControlName="name" [class.is-invalid]="nameNoValido" />
+                            <small *ngIf="nameNoValido" class="text-danger">
                 Ingrese al menos 5 caracteres para el nombre
               </small>
-            </div>
-            <div class="col-md-6 form-group">
-              <input
-                type="email"
-                class="form-control"
-                formControlName="email"
-                placeholder="Ingrese su correo electronico..."
-                [class.is-invalid]="emailNoValido"
-              />
-              <small *ngIf="emailNoValido" class="text-danger">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <input type="email" class="form-control" formControlName="email" placeholder="Ingrese su correo electronico..." [class.is-invalid]="emailNoValido" />
+                            <small *ngIf="emailNoValido" class="text-danger">
                 Formato de correo incorrecto, Verifique!!!
               </small>
-            </div>
-          </div>
-          <div class="form-group">
-            <input
-              type="text"
-              class="form-control"
-              formControlName="subject"
-              placeholder="Ingrese o asunto o motivo..."
-              [class.is-invalid]="subjectNoValido"
-            />
-            <small *ngIf="subjectNoValido" class="text-danger">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName="subject" placeholder="Ingrese o asunto o motivo..." [class.is-invalid]="subjectNoValido" />
+                        <small *ngIf="subjectNoValido" class="text-danger">
               Ingrese el motivo o asunto...
             </small>
-          </div>
-          <div class="form-group">
-            <textarea
-              class="form-control"
-              rows="5"
-              formControlName="message"
-              placeholder="Ingrese su mensaje..."
-              [class.is-invalid]="messageNoValido"
-            ></textarea>
-            <small *ngIf="messageNoValido" class="text-danger">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="5" formControlName="message" placeholder="Ingrese su mensaje..." [class.is-invalid]="messageNoValido"></textarea>
+                        <small *ngIf="messageNoValido" class="text-danger">
               Ingrese su mensaje para su solicitud...
             </small>
-          </div>
-          <div class="text-center">
-            <button type="submit">Enviar Solicitud</button>
-          </div>
-        </form>
-      </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit">Enviar Solicitud</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 <!-- End Contact Section -->
 
 <!-- ======= Map Section ======= -->
 <section class="map mt-2">
-  <div class="container-fluid p-0">
-    <iframe
-      src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJPQWaFlVYKowR8CUpyFw8o78&key=AIzaSyD3FW1xxOn7_h7CQ6wniDh9OFbfTWxMCPc"
-      frameborder="0"
-      style="border: 0"
-      allowfullscreen=""
-    ></iframe>
-  </div>
+    <div class="container-fluid p-0">
+        <iframe src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJPQWaFlVYKowR8CUpyFw8o78&key=AIzaSyD3FW1xxOn7_h7CQ6wniDh9OFbfTWxMCPc" frameborder="0" style="border: 0" allowfullscreen=""></iframe>
+    </div>
 </section>
 <!-- End Map Section -->
 
