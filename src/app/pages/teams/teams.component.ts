@@ -14,18 +14,18 @@ export class TeamsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
+
   abrirModalWithParameter(paramAux: string, nombres: string, apellidos: string) {
-  
+
     // console.log("lleuge al servicio");
-    console.log(paramAux);
+    /* console.log(paramAux);
     console.log(apellidos);
-    console.log(nombres);
-    
-    
+    console.log(nombres); */
+
+
     this.modalFormTeamsService.abrirModalTWithparameter( paramAux, nombres, apellidos );
 
-  
+
   }
 
 }

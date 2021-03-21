@@ -50,9 +50,12 @@ export class InfoPageDashboardService {
 
   private buscarDataPageDashboard(token: string, usuario: string, idpage: number, idSection: number) {
 
+
     let url_comple = "/sections/obtener_page_section/";
 
     let urlFinal = this.url + url_comple;
+
+    console.log(urlFinal);
 
     return this.http.get(urlFinal + `${token}/${usuario}/${idpage}/${idSection}`)
       .subscribe((response: InfoPageServices) => {
@@ -60,7 +63,7 @@ export class InfoPageDashboardService {
         this.infoPageDashboardServices = response;
       /** Seccion de Services */
 
-        // console.log(this.infoPageDashboardServices);
+        console.log(this.infoPageDashboardServices);
 
         this.infoPageSection1 = this.infoPageDashboardServices.page_section[0];
         this.image1 = this.infoPageDashboardServices.page_section[0]["section_url_img"]
