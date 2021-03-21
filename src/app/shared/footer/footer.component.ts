@@ -45,9 +45,9 @@ export class FooterComponent implements OnInit {
 
   guardarSubscription() {
 
-    console.log("Prueba del envio");
+    // console.log("Prueba del envio");
 
-    console.log(this.formaSubscription);
+    // console.log(this.formaSubscription);
 
     if (this.formaSubscription.invalid) {
       return Object.values(this.formaSubscription.controls).forEach((control) => {
@@ -61,7 +61,7 @@ export class FooterComponent implements OnInit {
       });
     }
 
-    console.log(this.formaSubscription.value.mail_subscription);
+    // console.log(this.formaSubscription.value.mail_subscription);
 
     this.solSubscription.email_subscription = this.formaSubscription.value.email_subscription;
 
@@ -80,7 +80,7 @@ export class FooterComponent implements OnInit {
       .subscribe((responseService: ResponseServiceSingle) => {
 
         this.responseSolSubscription = responseService;
-        console.log( this.responseSolSubscription);
+        // console.log( this.responseSolSubscription);
 
         if (this.responseSolSubscription.error = "false") {
 

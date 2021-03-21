@@ -43,12 +43,12 @@ export class InfoPageAboutUsService {
         this.infoPageAboutUsServices = response;
         /** Seccion de Services */
 
-         console.log(this.infoPageAboutUsServices);
+         // console.log(this.infoPageAboutUsServices);
 /*
         this.infoPageSection5 = this.infoPageDevelopmentServices.page_section[0];
         this.image5 = this.infoPageDevelopmentServices.page_section[0]["section_url_img"];
 
-        console.log(this.infoPageSection5); */
+        // console.log(this.infoPageSection5); */
 
       });
   }

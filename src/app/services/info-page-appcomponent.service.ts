@@ -21,21 +21,21 @@ export class InfoPageAppcomponentService {
   infoPageSection2: InfoPageSection = {};
   infoPageSection3: InfoPageSection = {};
   infoPageSection: InfoPageSection = {};
-  
 
 
-  constructor(private http: HttpClient) { 
+
+  constructor(private http: HttpClient) {
 
     this.buscarDataPageServices(this.tokenP, this.usuarioP, this.idpageP, this.idsectionP);
-    
+
   }
 
   /**
    * Metodo para buscar la seccion de la pagina de appComonent de forma dinamica
-   * @param token 
-   * @param usuario 
-   * @param idpage 
-   * @param idSection 
+   * @param token
+   * @param usuario
+   * @param idpage
+   * @param idSection
    * @return La seccion de una pagina dado los paramtros de entrada
    */
 
@@ -56,19 +56,17 @@ export class InfoPageAppcomponentService {
         this.infoPageSection3 = this.infoPageAppServices.page_section[2];
         this.infoPageSection.page_section = this.infoPageAppServices.page_section;
 
-        console.log(this.infoPageSection1);
-        console.log(this.infoPageSection2);
-        console.log(this.infoPageSection3);
-        
-        console.log(this.infoPageSection);
+        // console.log(this.infoPageSection1);
+        // console.log(this.infoPageSection2);
+        // console.log(this.infoPageSection3);
 
-        console.log("entre");
+        // console.log(this.infoPageSection);
 
-        console.log(this.infoPageSection.page_section);      
-        
-        console.log("sali");
+        // console.log("entre");
 
-        
+        // console.log(this.infoPageSection.page_section);
+
+        // console.log("sali");
 
         //    this.pageSectionWhyus = this.infoPageServices.page_section[1]
       });

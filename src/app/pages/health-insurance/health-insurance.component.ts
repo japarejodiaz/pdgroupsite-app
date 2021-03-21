@@ -14,10 +14,10 @@ export class HealthInsuranceComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
+
   abrirModal() {
     this.modalFormService.abrirModal();
-    console.log(this._infoPageHealthInsuranceService.image1);
+    // console.log(this._infoPageHealthInsuranceService.image1);
   }
 
 }

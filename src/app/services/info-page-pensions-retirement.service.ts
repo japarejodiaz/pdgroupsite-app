@@ -7,7 +7,7 @@ import { InfoPageServices, InfoPageSection } from '../interfaces/info-page-servi
   providedIn: 'root'
 })
 export class InfoPagePensionsRetirementService {
-  
+
   url: string = URL_SERVICIOS;
   tokenP: string = "1";
   usuarioP: string = "1";
@@ -25,10 +25,10 @@ export class InfoPagePensionsRetirementService {
     this.buscarDataPensionsRetirementPage(this.tokenP, this.usuarioP, this.idpageP, this.idsectionP);
 
   }
-  
-  
+
+
   private buscarDataPensionsRetirementPage(token: string, usuario: string, idpage: number, idSection: number) {
-  
+
     let url_comple = "/sections/obtener_page_section/";
 
     let urlFinal = this.url + url_comple;
@@ -38,22 +38,22 @@ export class InfoPagePensionsRetirementService {
 
         this.infoPagePensionsRetirementServices = response;
       /** Seccion de Services */
-        
-        console.log(this.infoPagePensionsRetirementServices);
+
+        // console.log(this.infoPagePensionsRetirementServices);
 
         this.infoPageSection1 = this.infoPagePensionsRetirementServices.page_section[0];
         this.image1 = this.infoPagePensionsRetirementServices.page_section[0]["section_url_img"]
         this.infoPageSection2 = this.infoPagePensionsRetirementServices.page_section[1];
         this.image2 = this.infoPagePensionsRetirementServices.page_section[1]["section_url_img"]
-       
-        console.log(this.infoPageSection1);
-        console.log(this.infoPageSection2);
+
+        // console.log(this.infoPageSection1);
+        // console.log(this.infoPageSection2);
 
         //    this.pageSectionWhyus = this.infoPageServices.page_section[1]
       });
-  
-  
+
+
   }
-  
-  
+
+
 }

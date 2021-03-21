@@ -19,7 +19,7 @@ export class InfoPageScheduleSavingsService {
   infoPageSection1: InfoPageSection = {};
 
   constructor( private http: HttpClient ) {
-  
+
     this.buscarDataScheduleSavingsPage(this.tokenP, this.usuarioP, this.idpageP, this.idsectionP);
   }
 
@@ -35,12 +35,12 @@ export class InfoPageScheduleSavingsService {
         this.infoPageScheduleSavingsServices = response;
         /** Seccion de Services */
 
-        console.log(this.infoPageScheduleSavingsServices);
+        //    thisconsole.log(this.infoPageScheduleSavingsServices);
 
         this.infoPageSection1 = this.infoPageScheduleSavingsServices.page_section[0];
         this.image1 = this.infoPageScheduleSavingsServices.page_section[0]["section_url_img"]
 
-        console.log(this.infoPageSection1);
+        // console.log(this.infoPageSection1);
 
       });
 

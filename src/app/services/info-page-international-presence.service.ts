@@ -42,7 +42,7 @@ export class InfoPageInternationalPresenceService {
         this.infoPageInternationalPresenceServices = response;
         /** Seccion de Services */
 
-        console.log(this.infoPageInternationalPresenceServices);
+        // console.log(this.infoPageInternationalPresenceServices);
 
         this.infoPageSection1 = this.infoPageInternationalPresenceServices.page_section[0];
         this.image1 = this.infoPageInternationalPresenceServices.page_section[0]["section_url_img"]
@@ -53,10 +53,10 @@ export class InfoPageInternationalPresenceService {
         this.infoPageSection4 = this.infoPageInternationalPresenceServices.page_section[3];
         this.image4 = this.infoPageInternationalPresenceServices.page_section[3]["section_url_img"]
 
-        console.log(this.infoPageSection1);
-        console.log(this.infoPageSection2);
-        console.log(this.infoPageSection3);
-        console.log(this.infoPageSection4);
+        // console.log(this.infoPageSection1);
+        // console.log(this.infoPageSection2);
+        // console.log(this.infoPageSection3);
+        // console.log(this.infoPageSection4);
 
       });
 

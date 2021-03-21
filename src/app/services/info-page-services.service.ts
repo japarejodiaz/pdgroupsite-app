@@ -59,16 +59,16 @@ export class InfoPageServicesService {
         this.infoPageSection5 = this.infoPageServices.page_section[4];
         //    this.pageSectionWhyus = this.infoPageServices.page_section[1]
 
-        // console.log(this.infoPageSection["section_parrafo_h4"]);
-        // console.log(this.infoPageSection);
-        // console.log(this.pageSectionWhyus);
+        // // console.log(this.infoPageSection["section_parrafo_h4"]);
+        // // console.log(this.infoPageSection);
+        // // console.log(this.pageSectionWhyus);
 
         /* for (let i in this.pageSection) {
-          console.log(this.pageSection[i].section_parrafo_h4);
+          // console.log(this.pageSection[i].section_parrafo_h4);
         }
 
         for(let i in this.pageSection){
-  console.log(i); // a, b, c
+  // console.log(i); // a, b, c
 } */
 
 
@@ -97,12 +97,12 @@ export class InfoPageServicesService {
         this.pageSectionWhyus5 = this.infoPageServicesWhyUs.page_section[4];
         //    this.pageSectionWhyus = this.infoPageServices.page_section[1]
 
-        // console.log(this.infoPageSection["section_parrafo_h4"]);
-        // console.log(this.infoPageSection);
-        console.log(this.infoPageServicesWhyUs);
+        // // console.log(this.infoPageSection["section_parrafo_h4"]);
+        // // console.log(this.infoPageSection);
+        // console.log(this.infoPageServicesWhyUs);
 
 
-        
+
 
 
       });

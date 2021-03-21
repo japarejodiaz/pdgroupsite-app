@@ -7,28 +7,28 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class InfoPageFooterSubscripcionService {
-  
+
   token: string;
   usuario: string;
   url: string = URL_SERVICIOS;
-    
+
   infoResponseServiceSingle: ResponseServiceSingle;
   infoResponseServiceSingleWithID: ResponseServiceSingleWithID;
 
-  constructor( private httpSubscription: HttpClient ) { } 
-  
-  
-  crearSubscription($token: string, $usuario: string, $sol_sub: SolSubscription) {  
-    
-    console.log("Enviando subscripcion....");
-    
-    console.log($sol_sub);
-    
+  constructor( private httpSubscription: HttpClient ) { }
+
+
+  crearSubscription($token: string, $usuario: string, $sol_sub: SolSubscription) {
+
+    // console.log("Enviando subscripcion....");
+
+    // console.log($sol_sub);
+
     let url_comple = "/subscriptions/create_subscription/";
-    
+
     let urlFinal = this.url + url_comple;
-    
-    return this.httpSubscription.post(urlFinal + `${$token}/${$usuario}`, $sol_sub);   
-  
-  } 
+
+    return this.httpSubscription.post(urlFinal + `${$token}/${$usuario}`, $sol_sub);
+
+  }
 }

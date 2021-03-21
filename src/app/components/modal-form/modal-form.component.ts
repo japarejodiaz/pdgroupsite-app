@@ -12,7 +12,7 @@ import Swal from 'sweetalert2';
   ]
 })
 export class ModalFormComponent implements OnInit {
-  
+
   formaSolModal: FormGroup;
 
   solRequest: SolRequest = {};
@@ -32,11 +32,11 @@ export class ModalFormComponent implements OnInit {
   }
 
   cerrarModal() {
-    
-    this.modelFormService.cerrarModal();   
+
+    this.modelFormService.cerrarModal();
 
   }
-  
+
   /********************
   * Rutina para validar el nombre del formulario
   * @title nameNoValido
@@ -73,7 +73,7 @@ export class ModalFormComponent implements OnInit {
       this.formaSolModal.get('message').invalid && this.formaSolModal.get('message').touched
     );
   }
-  
+
   crearFormulario() {
     this.formaSolModal = this.fb.group(
       {
@@ -83,17 +83,17 @@ export class ModalFormComponent implements OnInit {
         message: ['', [Validators.required, Validators.minLength(25)]]
       }
     );
-  }  
-  
-  
+  }
+
+
   guardarSolModal() {
 
-    console.log(this.formaSolModal);
+    /* // console.log(this.formaSolModal);
 
-    console.log("pasa a la clase");
+    // console.log("pasa a la clase");
 
-    console.log(this.formaSolModal);
-
+    // console.log(this.formaSolModal);
+ */
     if (this.formaSolModal.invalid) {
       return Object.values(this.formaSolModal.controls).forEach((control) => {
         if (control instanceof FormGroup) {
@@ -112,7 +112,7 @@ export class ModalFormComponent implements OnInit {
     this.solRequest.message = this.formaSolModal.value.message;
     this.solRequest.subject = this.formaSolModal.value.subject;
     this.solRequest.email = this.formaSolModal.value.email;
-    
+
     Swal.fire({
        position: 'top-end',
       icon: 'info',
@@ -122,15 +122,15 @@ export class ModalFormComponent implements OnInit {
       timer: 5000
     });
     Swal.showLoading();
-    
+
     this.contactUsService.buscarContactUs_SolRequest(this.solRequest).subscribe
       ((response: ResponseServiceSingle) => {
         this.responseSolRequest = response;
-        console.log(this.responseSolRequest.error);
-        console.log(this.responseSolRequest.mensaje);
-
+        /* // console.log(this.responseSolRequest.error);
+        // console.log(this.responseSolRequest.mensaje);
+ */
         if (this.responseSolRequest.error == "true") {
-          console.log("Se coloca un alerta");
+          // // console.log("Se coloca un alerta");
           Swal.fire({
             position: 'top-end',
             icon: 'warning',
@@ -139,7 +139,7 @@ export class ModalFormComponent implements OnInit {
           })
 
         } else { //
-          console.log("se puede guardar va al post");
+          // // console.log("se puede guardar va al post");
 
           /** Llama al servicio de Creacion de registro de solicitud de informacion */
 
@@ -147,7 +147,7 @@ export class ModalFormComponent implements OnInit {
             .subscribe((responseServiceWithID: ResponseServiceSingleWithID) => {
 
               this.responseWithID = responseServiceWithID;
-              console.log(responseServiceWithID);
+              // // console.log(responseServiceWithID);
               if (this.responseWithID.error = "false") {
 
                 /** Llama al servicio de notificaciones */
@@ -172,7 +172,7 @@ export class ModalFormComponent implements OnInit {
                         message: '',
                         email: ''
                       });
-                      
+
                       this.modelFormService.cerrarModal();
 
                     } else {
@@ -204,8 +204,8 @@ export class ModalFormComponent implements OnInit {
 
       });
   }
-  
-  
+
+
 
 
 }

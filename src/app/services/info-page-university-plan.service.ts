@@ -13,13 +13,13 @@ export class InfoPageUniversityPlanService {
   usuarioP: string = "1";
   idpageP: number = 12;
   idsectionP: number = 1;
-  image1: string; 
-  
+  image1: string;
+
   infoPageUniversityPlanServices: InfoPageServices = {};
-  infoPageSection1: InfoPageSection = {}; 
+  infoPageSection1: InfoPageSection = {};
 
   constructor( private http: HttpClient ) {
-  
+
     this.buscarDataUniversityPlanPage(this.tokenP, this.usuarioP, this.idpageP, this.idsectionP);
   }
 
@@ -35,13 +35,13 @@ export class InfoPageUniversityPlanService {
         this.infoPageUniversityPlanServices = response;
         /** Seccion de Services */
 
-        console.log(this.infoPageUniversityPlanServices);
+        // console.log(this.infoPageUniversityPlanServices);
 
         this.infoPageSection1 = this.infoPageUniversityPlanServices.page_section[0];
         this.image1 = this.infoPageUniversityPlanServices.page_section[0]["section_url_img"]
-        
-        console.log(this.infoPageSection1);
-       
+
+        // console.log(this.infoPageSection1);
+
       });
 
 

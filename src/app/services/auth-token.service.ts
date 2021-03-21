@@ -19,14 +19,14 @@ export class AuthTokenService {
 
 
   constructor(public http: HttpClient) {
-    console.log("llegue al servicio");
+    // console.log("llegue al servicio");
   }
 
 
   ingresar(correo: string, contrasena: string) {
 
     /* let data = new URLSearchParams();
-    
+
     data.append("correo", correo );
     data.append("contrasena", contrasena); */
 
@@ -39,15 +39,15 @@ export class AuthTokenService {
 
     let url = URL_SERVICIOS + "/jwtToken/login"
 
-    console.log(data);
+    // console.log(data);
 
     return this.http.post(url, data)
       .subscribe((resp: ResponseGenerateToken) => {
 
-        console.log(resp);
+        // console.log(resp);
         this.responseGenerateToken = resp;
 
-        console.log(this.token = resp.token);
+        // console.log(this.token = resp.token);
       })
 
 

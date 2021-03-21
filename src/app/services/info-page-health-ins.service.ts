@@ -18,10 +18,10 @@ export class InfoPageHealthInsService {
   infoPageHealthInsuranceServices: InfoPageServices = {};
   infoPageSection1: InfoPageSection = {};
   infoPageSection2: InfoPageSection = {};
-  
-  
+
+
   constructor(private http: HttpClient) {
-  
+
      this.buscarDataHealthInsurancePage(this.tokenP, this.usuarioP, this.idpageP, this.idsectionP);
 
   }
@@ -38,15 +38,15 @@ export class InfoPageHealthInsService {
         this.infoPageHealthInsuranceServices = response;
         /** Seccion de Services */
 
-        console.log(this.infoPageHealthInsuranceServices);
+        // console.log(this.infoPageHealthInsuranceServices);
 
         this.infoPageSection1 = this.infoPageHealthInsuranceServices.page_section[0];
         this.image1 = this.infoPageHealthInsuranceServices.page_section[0]["section_url_img"]
         this.infoPageSection2 = this.infoPageHealthInsuranceServices.page_section[1];
         this.image2 = this.infoPageHealthInsuranceServices.page_section[1]["section_url_img"]
 
-        console.log(this.infoPageSection1);
-        console.log(this.infoPageSection2);
+        // console.log(this.infoPageSection1);
+        // console.log(this.infoPageSection2);
 
         //    this.pageSectionWhyus = this.infoPageServices.page_section[1]
       });

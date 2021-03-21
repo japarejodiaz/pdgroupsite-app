@@ -20,8 +20,8 @@ export class SendNotificationsService {
 
 
   enviarNotificaciones($token: string, $usuario: string, $sol_req: SolRequest) {
-    
-    console.log("pase por enviar el correo");
+
+    // console.log("pase por enviar el correo");
 
     let url_comple = "/email/sendmail/";
 

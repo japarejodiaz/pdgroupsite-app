@@ -54,7 +54,7 @@ export class InfoPageService {
 
         this.infoProducto = resp;
 
-        /* console.log(this.infoProducto.error);
+        /* // console.log(this.infoProducto.error);
         console.log(this.infoProducto.producto[0].producto); */
 
         for(let i in this.infoProducto.producto) {

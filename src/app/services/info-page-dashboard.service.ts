@@ -23,21 +23,21 @@ export class InfoPageDashboardService {
   infoPageSection2: InfoPageSection = {};
   infoPageSection3: InfoPageSection = {};
   infoPageSection4: InfoPageSection = {};
-  
+
   pageSectionWhyus1: InfoPageSection = {};
-  pageSectionWhyus2: InfoPageSection = {};  
-    
+  pageSectionWhyus2: InfoPageSection = {};
+
   pageSectionFeatures1: InfoPageSection = {};
   pageSectionFeatures2: InfoPageSection = {};
-  pageSectionFeatures3: InfoPageSection = {};  
-  
+  pageSectionFeatures3: InfoPageSection = {};
+
   listIconSection1: string [] = [];
   listIconSection2: string [] = [];
-  
-  image1: string; 
-  image2: string; 
-  image3: string; 
-  image4: string; 
+
+  image1: string;
+  image2: string;
+  image3: string;
+  image4: string;
 
   constructor(private http: HttpClient) {
 
@@ -59,8 +59,8 @@ export class InfoPageDashboardService {
 
         this.infoPageDashboardServices = response;
       /** Seccion de Services */
-        
-        console.log(this.infoPageDashboardServices);
+
+        // console.log(this.infoPageDashboardServices);
 
         this.infoPageSection1 = this.infoPageDashboardServices.page_section[0];
         this.image1 = this.infoPageDashboardServices.page_section[0]["section_url_img"]
@@ -71,13 +71,13 @@ export class InfoPageDashboardService {
         this.infoPageSection4 = this.infoPageDashboardServices.page_section[3];
         this.image4 = this.infoPageDashboardServices.page_section[3]["section_url_img"]
 
-        console.log(this.infoPageSection1);
-        console.log(this.infoPageSection2);
-        console.log(this.infoPageSection3);
-        console.log(this.infoPageSection4);
+        // console.log(this.infoPageSection1);
+        // console.log(this.infoPageSection2);
+        // console.log(this.infoPageSection3);
+        // console.log(this.infoPageSection4);
 
         //    this.pageSectionWhyus = this.infoPageServices.page_section[1]
-        
+
       });
   }
 
@@ -94,12 +94,12 @@ export class InfoPageDashboardService {
         /** Seccion de Whyus*/
         this.pageSectionWhyus1 = this.infoPageServicesWhyUs.page_section[0];
         this.pageSectionWhyus2 = this.infoPageServicesWhyUs.page_section[1];
-        console.log(this.infoPageServicesWhyUs);
+        // console.log(this.infoPageServicesWhyUs);
 
       });
 
   }
-  
+
   buscarDataPagesDashboardFeatures(token: string, usuario: string, idpage: number, idSection: number) {
 
     let url_comple = "/sections/obtener_page_section/";
@@ -115,31 +115,31 @@ export class InfoPageDashboardService {
         this.pageSectionFeatures1 = this.infoPageServicesFeatures.page_section[0];
         this.pageSectionFeatures2 = this.infoPageServicesFeatures.page_section[1];
         this.pageSectionFeatures3 = this.infoPageServicesFeatures.page_section[2];
-        console.log(this.infoPageServicesFeatures);
+        // console.log(this.infoPageServicesFeatures);
 
-        // console.log(this.pageSectionFeatures1.page_section.detalle[0]["parrafo_icon_text"]);
+        // // console.log(this.pageSectionFeatures1.page_section.detalle[0]["parrafo_icon_text"]);
 
-        console.log(this.infoPageServicesFeatures.page_section[0].detalle[0]);
-        console.log(this.infoPageServicesFeatures.page_section[0].detalle[0]["parrafo_icon_text"]);
-        console.log(this.infoPageServicesFeatures.page_section[0].detalle[1]["parrafo_icon_text"]);
-        console.log(this.infoPageServicesFeatures.page_section[0].detalle[1]);
-        
+        // console.log(this.infoPageServicesFeatures.page_section[0].detalle[0]);
+        // console.log(this.infoPageServicesFeatures.page_section[0].detalle[0]["parrafo_icon_text"]);
+        // console.log(this.infoPageServicesFeatures.page_section[0].detalle[1]["parrafo_icon_text"]);
+        // console.log(this.infoPageServicesFeatures.page_section[0].detalle[1]);
+
         this.listIconSection1[0] = this.infoPageServicesFeatures.page_section[0].detalle[0]["parrafo_icon_text"];
-        this.listIconSection1[1] = this.infoPageServicesFeatures.page_section[0].detalle[1]["parrafo_icon_text"];       
+        this.listIconSection1[1] = this.infoPageServicesFeatures.page_section[0].detalle[1]["parrafo_icon_text"];
         this.listIconSection2[0] = this.infoPageServicesFeatures.page_section[2].detalle[0]["parrafo_icon_text"];
         this.listIconSection2[1] = this.infoPageServicesFeatures.page_section[2].detalle[1]["parrafo_icon_text"];
         this.listIconSection2[2] = this.infoPageServicesFeatures.page_section[2].detalle[2]["parrafo_icon_text"];
-        this.listIconSection2[3] = this.infoPageServicesFeatures.page_section[2].detalle[3]["parrafo_icon_text"];        
-        
-                
+        this.listIconSection2[3] = this.infoPageServicesFeatures.page_section[2].detalle[3]["parrafo_icon_text"];
+
+
       });
 
   }
-  
-  
-  
-  
-  
+
+
+
+
+
 }
 
 

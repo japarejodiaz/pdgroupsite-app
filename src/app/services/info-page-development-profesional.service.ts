@@ -57,10 +57,9 @@ export class InfoPageDevelopmentProfesionalService {
 
   buscarDevelopProfesional_SolRequest($sol_request: SolRequest) {
 
-    console.log("voy a buscar por correo");
-
+    /* console.log("voy a buscar por correo");
     console.log("Sol Reques" + $sol_request.email);
-    console.log("Sol Reques" + $sol_request.subject);
+    console.log("Sol Reques" + $sol_request.subject); */
 
     let url_comple = "/contactus/buscar_contact_us_email/";
 
@@ -72,8 +71,8 @@ export class InfoPageDevelopmentProfesionalService {
 
   crearRegistroSolicitud($token: string, $usuario: string, $sol_req: SolRequest) {
 
-    console.log("Enviando correo....");
-
+    /* console.log("Enviando correo....");
+ */
     let url_comple = "/contactus/create_contact_us/";
 
     let urlFinal = this.url + url_comple;
@@ -94,12 +93,12 @@ export class InfoPageDevelopmentProfesionalService {
         this.infoPageDevelopmentServices = response;
         /** Seccion de Services */
 
-        console.log(this.infoPageDevelopmentServices);
+        // console.log(this.infoPageDevelopmentServices);
 
         this.infoPageSection5 = this.infoPageDevelopmentServices.page_section[0];
         this.image5 = this.infoPageDevelopmentServices.page_section[0]["section_url_img"];
 
-        console.log(this.infoPageSection5);
+        // console.log(this.infoPageSection5);
 
       });
   }
@@ -127,12 +126,10 @@ export class InfoPageDevelopmentProfesionalService {
         this.infoPageSection4 = this.infoPageDevelopmentServices2.page_section[3];
         this.image4 = this.infoPageDevelopmentServices2.page_section[3]["section_url_img"]
 
-        console.log(this.infoPageSection1);
+       /*  console.log(this.infoPageSection1);
         console.log(this.infoPageSection2);
         console.log(this.infoPageSection3);
-        console.log(this.infoPageSection4);
-
-
+        console.log(this.infoPageSection4); */
 
       });
   }

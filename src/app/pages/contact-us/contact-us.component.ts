@@ -77,11 +77,11 @@ export class ContactUsComponent implements OnInit {
   */
   guardarSolContactUs() {
 
-    console.log(this.formaSol);
+    // console.log(this.formaSol);
 
-    console.log("pasa a la clase");
+    // console.log("pasa a la clase");
 
-    console.log(this.formaSol);
+    // console.log(this.formaSol);
 
     if (this.formaSol.invalid) {
       return Object.values(this.formaSol.controls).forEach((control) => {
@@ -102,7 +102,7 @@ export class ContactUsComponent implements OnInit {
     this.solRequest.message = this.formaSol.value.message;
     this.solRequest.subject = this.formaSol.value.subject;
     this.solRequest.email = this.formaSol.value.email;
-    // console.log(this.formaSol.value.name);
+    // // console.log(this.formaSol.value.name);
 
     Swal.fire({
       position: 'top-end',
@@ -117,11 +117,11 @@ export class ContactUsComponent implements OnInit {
     this.contactUsService.buscarContactUs_SolRequest(this.solRequest).subscribe
       ((response: ResponseServiceSingle) => {
         this.responseSolRequest = response;
-        console.log(this.responseSolRequest.error);
-        console.log(this.responseSolRequest.mensaje);
+        // console.log(this.responseSolRequest.error);
+        // console.log(this.responseSolRequest.mensaje);
 
         if (this.responseSolRequest.error == "true") {
-          console.log("Se coloca un alerta");
+          // console.log("Se coloca un alerta");
           Swal.fire({
             position: 'top-end',
             icon: 'warning',
@@ -130,7 +130,7 @@ export class ContactUsComponent implements OnInit {
           })
 
         } else { //
-          console.log("se puede guardar va al post");
+          // console.log("se puede guardar va al post");
 
           /** Llama al servicio de Creacion de registro de solicitud de informacion */
 
@@ -138,7 +138,7 @@ export class ContactUsComponent implements OnInit {
             .subscribe((responseServiceWithID: ResponseServiceSingleWithID) => {
 
               this.responseWithID = responseServiceWithID;
-              console.log(responseServiceWithID);
+              // console.log(responseServiceWithID);
               if (this.responseWithID.error = "false") {
 
                 /** Llama al servicio de notificaciones */
