@@ -50,7 +50,6 @@ export class InfoPageDashboardService {
 
   private buscarDataPageDashboard(token: string, usuario: string, idpage: number, idSection: number) {
 
-
     let url_comple = "/sections/obtener_page_section/";
 
     let urlFinal = this.url + url_comple;
