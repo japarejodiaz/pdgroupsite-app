@@ -54,7 +54,7 @@ export class InfoPageDashboardService {
 
     let urlFinal = this.url + url_comple;
 
-    console.log(urlFinal);
+    // console.log(urlFinal);
 
     return this.http.get(urlFinal + `${token}/${usuario}/${idpage}/${idSection}`)
       .subscribe((response: InfoPageServices) => {
