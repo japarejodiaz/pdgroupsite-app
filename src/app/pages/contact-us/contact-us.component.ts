@@ -108,9 +108,9 @@ export class ContactUsComponent implements OnInit {
       position: 'top-end',
       icon: 'info',
       title: 'Por favor espere...',
-      text: 'Guardando la informacion...',
+      text: 'Guardando la informacion...!!!',
       allowOutsideClick: false,
-      timer: 5000
+      timer: 3000
     });
     Swal.showLoading();
 
@@ -125,7 +125,7 @@ export class ContactUsComponent implements OnInit {
           Swal.fire({
             position: 'top-end',
             icon: 'warning',
-            title: 'Ya correo esta registrado!!!',
+            title: 'Ya esta cuenta de correo esta registrada!!!',
             showConfirmButton: true
           })
 
@@ -138,21 +138,25 @@ export class ContactUsComponent implements OnInit {
             .subscribe((responseServiceWithID: ResponseServiceSingleWithID) => {
 
               this.responseWithID = responseServiceWithID;
-              // console.log(responseServiceWithID);
-              if (this.responseWithID.error = "false") {
+              console.log(responseServiceWithID);
+              console.log(responseServiceWithID.error);
+              if (this.responseWithID.error == "false") {
 
                 /** Llama al servicio de notificaciones */
+
+                console.log('entro en el false');
+
                 this._infoSendNotificationsService.enviarNotificaciones("1", "1", this.solRequest)
                   .subscribe((responseServiceN: ResponseServiceSingle) => {
 
                     this.responseSolRequestN = responseServiceN;
 
-                    if (this.responseSolRequestN.error = "false") {
+                    if (this.responseSolRequestN.error == "false") {
 
                       Swal.fire({
                         position: 'top-end',
                         icon: 'success',
-                        title: 'Su solicitud ha sido guardada con satisfactoriamente!!!',
+                        title: 'Su solicitud ha sido guardada satisfactoriamente!!!',
                         showConfirmButton: true
                       })
 

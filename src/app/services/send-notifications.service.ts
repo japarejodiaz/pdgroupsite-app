@@ -21,11 +21,13 @@ export class SendNotificationsService {
 
   enviarNotificaciones($token: string, $usuario: string, $sol_req: SolRequest) {
 
-    // console.log("pase por enviar el correo");
+    console.log("pase por enviar el correo");
 
     let url_comple = "/email/sendmail/";
 
     let urlFinal = this.url + url_comple;
+
+    console.log(urlFinal);
 
     return this.httpSendMail.post(urlFinal + `${$token}/${$usuario}`, $sol_req);
 

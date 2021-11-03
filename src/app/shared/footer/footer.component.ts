@@ -71,7 +71,7 @@ export class FooterComponent implements OnInit {
       title: 'Por favor espere...',
       text: 'Guardando la informacion...',
       allowOutsideClick: false,
-      timer: 5000
+      timer: 3000
     });
 
     Swal.showLoading();
@@ -80,14 +80,16 @@ export class FooterComponent implements OnInit {
       .subscribe((responseService: ResponseServiceSingle) => {
 
         this.responseSolSubscription = responseService;
-        // console.log( this.responseSolSubscription);
+        console.log(this.responseSolSubscription.error);
 
-        if (this.responseSolSubscription.error = "false") {
+        if (this.responseSolSubscription.error == "false") {
+
+          console.log("es false");
 
           Swal.fire({
             position: 'top-end',
             icon: 'success',
-            title: 'Su subscripción ha scido guardada satisfactoriamente!!!',
+            title: 'Su subscripción ha sido guardada satisfactoriamente!!!',
             showConfirmButton: true
           })
 
@@ -96,6 +98,8 @@ export class FooterComponent implements OnInit {
           });
 
         } else {
+
+          console.log("es ttrue");
 
           Swal.fire({
             position: 'top-end',
@@ -106,7 +110,7 @@ export class FooterComponent implements OnInit {
 
         }
 
-      });  
+      });
 
 
   }

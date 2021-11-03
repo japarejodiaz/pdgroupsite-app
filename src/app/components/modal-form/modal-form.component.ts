@@ -148,7 +148,7 @@ export class ModalFormComponent implements OnInit {
 
               this.responseWithID = responseServiceWithID;
               // // console.log(responseServiceWithID);
-              if (this.responseWithID.error = "false") {
+              if (this.responseWithID.error == "false") {
 
                 /** Llama al servicio de notificaciones */
                 this._infoSendNotificationsService.enviarNotificaciones("1", "1", this.solRequest)
@@ -156,13 +156,13 @@ export class ModalFormComponent implements OnInit {
 
                     this.responseSolRequestN = responseServiceN;
 
-                    if (this.responseSolRequestN.error = "false") {
+                    if (this.responseSolRequestN.error == "false") {
 
                       Swal.fire({
                         position: 'top-end',
                         icon: 'success',
                         title: 'Guardando la información!!!',
-                        text: 'Su solicitud ha sido guardada correctamente...',
+                        text: 'Su solicitud ha sido guardada correctamente...!!!',
                         showConfirmButton: true
                       })
 

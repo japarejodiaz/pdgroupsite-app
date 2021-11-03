@@ -5,7 +5,8 @@ let URL_SERVICIOS_FINAL = "http://localhost/apiRestFull/index.php";
 
 if (environment.production) {
 
-  URL_SERVICIOS_FINAL = "https://desatisolution.com.ve/apiRestFull/index.php";
+  // URL_SERVICIOS_FINAL = "https://desatisolution.com.ve/apiRestFull/index.php";
+  URL_SERVICIOS_FINAL = "https://agency-pdgroup.com/apiRestFull/index.php";
 
 }
 
