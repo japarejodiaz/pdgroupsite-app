@@ -10,7 +10,7 @@ import { InfoPageAboutUsService } from '../../services/info-page-about-us.servic
 export class AboutUsComponent implements OnInit {
 
   constructor( private modalFormService: ModalFormService,
-          public _InfoPageAboutUsService: InfoPageAboutUsService ) { }
+               public _InfoPageAboutUsService: InfoPageAboutUsService ) { }
 
   ngOnInit(): void {
   }
